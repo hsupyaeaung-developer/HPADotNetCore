@@ -80,10 +80,10 @@ namespace HPADotNetCore.ConsoleApp.DapperExamples
         public void Update(string id, string title, string author, string content)
         {
             string query = @"UPDATE [dbo].[Tbl_Blog]
-   SET [Blog_Title] = @Blog_Title
-      ,[Blog_Author] = @Blog_Author
-      ,[Blog_Content] = @Blog_Content
- WHERE Blog_Id = @Blog_Id";
+                            SET [Blog_Title] = @Blog_Title
+                            ,[Blog_Author] = @Blog_Author
+                            ,[Blog_Content] = @Blog_Content
+                            WHERE Blog_Id = @Blog_Id";
             using IDbConnection db = new SqlConnection(sqlConnectionStringBuilder.ToString());
             int result = db.Execute(query, new BlogDataModel
             {
