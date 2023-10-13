@@ -11,21 +11,21 @@ namespace HPADotNetCore.ConsoleApp.DapperExamples
 {
     public class DapperExample
     {
-        public readonly SqlConnectionStringBuilder sqlConnectionStringBuilder = new SqlConnectionStringBuilder
+        private readonly SqlConnectionStringBuilder sqlConnectionStringBuilder = new SqlConnectionStringBuilder
         {
             DataSource = ".",
             InitialCatalog = "AHMTZDotNetCore",
             UserID = "sa",
             Password = "sa@123",
-        }
+        };
 
-            ;
+            
         public void Run()
         {
 
             Create("test title", "test author", "test content");
-            Edit("16");
-            Update("16", "test16", "author16", "content16");
+            Edit(16);
+            Update(16, "test16", "author16", "content16");
             Read();
         }
         public void Read()
@@ -64,7 +64,7 @@ namespace HPADotNetCore.ConsoleApp.DapperExamples
             Console.WriteLine(message);
         }
 
-        public void Edit(string id)
+        public void Edit(int id)
         {
             string query = "select * from tbl_blog where Blog_Id=@Blog_Id";
             using IDbConnection db = new SqlConnection(sqlConnectionStringBuilder.ToString());
@@ -77,7 +77,7 @@ namespace HPADotNetCore.ConsoleApp.DapperExamples
             Console.WriteLine(item.Blog_Author);
             Console.WriteLine(item.Blog_Content);
         }
-        public void Update(string id, string title, string author, string content)
+        public void Update(int id, string title, string author, string content)
         {
             string query = @"UPDATE [dbo].[Tbl_Blog]
                             SET [Blog_Title] = @Blog_Title
