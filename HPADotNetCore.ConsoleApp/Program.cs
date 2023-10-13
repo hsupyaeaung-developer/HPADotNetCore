@@ -1,5 +1,7 @@
-﻿using System;
-using HPADotNetCore.ConsoleApp.AdoDotNetExamples;
+﻿using HPADotNetCore.ConsoleApp.AdoDotNetExamples;
+using HPADotNetCore.ConsoleApp.DapperExamples;
+using System;
+
 
 namespace HPADotNetCore.ConsoleApp
 {
@@ -9,8 +11,8 @@ namespace HPADotNetCore.ConsoleApp
         {
             Console.WriteLine("Hello World!");
 
-            AdoDotNetExample adoDotNetExample = new AdoDotNetExample();
-            adoDotNetExample.Run();
+            DapperExample dapperExamples = new DapperExample();
+            dapperExamples.Run();
         }
     }
 }
