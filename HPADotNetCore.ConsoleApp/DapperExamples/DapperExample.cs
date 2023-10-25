@@ -95,5 +95,22 @@ namespace HPADotNetCore.ConsoleApp.DapperExamples
             string message = result > 0 ? "Update Successful!" : "Update Failed!";
             Console.WriteLine(message);
         }
+
+        private void Delete(int id)
+        {
+            string query = $@"DELETE FROM [dbo].[Tbl_Blog]
+                     WHERE [Blog_Id] = @Blog_Id";
+
+            BlogDataModel blog = new BlogDataModel()
+            {
+                Blog_Id = id,
+            };
+
+            using IDbConnection db = new SqlConnection(sqlConnectionStringBuilder.ConnectionString);
+            var result = db.Execute(query, blog);
+            string message = result > 0 ? "Delete Successful." : "Delete Failed.";
+
+            Console.WriteLine(message);
+        }
     }
 }

@@ -119,5 +119,22 @@ namespace HPADotNetCore.ConsoleApp.AdoDotNetExamples
             string message = result > 0 ? "Updating Successful.!" : "Updating Failed.";
             Console.WriteLine(message);
         }
+
+        private void Delete(int id)
+        {
+            string query = $@"DELETE FROM[dbo].[Tbl_Blog] WHERE[Blog_ID] = @Blog_ID";
+            SqlConnection connection = new SqlConnection(sqlConnectionStringBuilder.ConnectionString);
+            connection.Open();
+
+            SqlCommand cmd = new SqlCommand(query, connection);
+            cmd.Parameters.AddWithValue("@Blog_Id", id);
+
+            int result = cmd.ExecuteNonQuery();
+            string message = result > 0 ? "Delete Successful." : "Delete Failed.";
+
+            connection.Close();
+
+            Console.WriteLine(message);
+        }
     }
 }
