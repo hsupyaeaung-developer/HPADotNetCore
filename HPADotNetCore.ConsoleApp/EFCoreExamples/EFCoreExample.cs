@@ -10,10 +10,10 @@ namespace HPADotNetCore.ConsoleApp.EFCoreExamples
     {
         public void Run()
         {
-            //Read();
+            Read();
            // Create("EF Core title", "EF Core author", "EF Core content");
             //Edit(21);
-            Update(21);
+           // Update(21);
         }
         private void Read()
         {
