@@ -8,13 +8,19 @@ namespace HPADotNetCore.RestApi.Controllers
     [ApiController]
     public class BlogController : ControllerBase
     {
+        private readonly AppDbContext _db
+            ;
+
+        public BlogController(AppDbContext db)
+        {
+            this._db = db;
+        }
+
         [HttpGet]
         public IActionResult GetBlogs()
         {
-            AppDbContext db = new AppDbContext();
             
-            
-            var lst = db.Blogs.ToList();
+            var lst = _db.Blogs.ToList();
             BlogListResponseModel model = new BlogListResponseModel()
             {
                 IsSuccess = true,
@@ -29,8 +35,8 @@ namespace HPADotNetCore.RestApi.Controllers
         {
             BlogResponseModel model = new BlogResponseModel();
 
-            AppDbContext db = new AppDbContext();
-            var item = db.Blogs.FirstOrDefault(x => x.Blog_Id == id);
+           
+            var item = _db.Blogs.FirstOrDefault(x => x.Blog_Id == id);
             if (item == null)
             {
                 model.IsSuccess = false;
@@ -47,9 +53,9 @@ namespace HPADotNetCore.RestApi.Controllers
         [HttpPost]
         public IActionResult CreateBlog([FromBody] BlogDataModel blog)
         {
-            AppDbContext db = new AppDbContext();
-            db.Blogs.Add(blog);
-            int result = db.SaveChanges();
+            
+            _db.Blogs.Add(blog);
+            int result = _db.SaveChanges();
             string message = result > 0 ? "Saving Successful!" : "Saving Failed!";
             BlogResponseModel model = new BlogResponseModel()
             {
@@ -65,8 +71,8 @@ namespace HPADotNetCore.RestApi.Controllers
         public IActionResult UpdateBlog(int id, [FromBody] BlogDataModel blog)
         {
             BlogResponseModel model = new BlogResponseModel();
-            AppDbContext db = new AppDbContext();
-            BlogDataModel item = db.Blogs.FirstOrDefault(x => x.Blog_Id == id);
+            
+            BlogDataModel item = _db.Blogs.FirstOrDefault(x => x.Blog_Id == id);
             if (item == null)
             {
                 model.IsSuccess = false;
@@ -77,7 +83,7 @@ namespace HPADotNetCore.RestApi.Controllers
             item.Blog_Content = blog.Blog_Content;
             item.Blog_Author = blog.Blog_Author;
 
-            int result = db.SaveChanges();
+            int result = _db.SaveChanges();
             string message = result > 0 ? "Update Successful!" : "Update Failed!";
 
             model = new BlogResponseModel()
@@ -92,9 +98,9 @@ namespace HPADotNetCore.RestApi.Controllers
         [HttpPatch("{id}")]
         public IActionResult PatchBlog(int id, [FromBody] BlogDataModel blog)
         {
-            AppDbContext db = new AppDbContext();
+            
             BlogResponseModel model = new BlogResponseModel();
-            var item = db.Blogs.FirstOrDefault(x => x.Blog_Id ==id);
+            var item = _db.Blogs.FirstOrDefault(x => x.Blog_Id ==id);
 
             if(item == null)
             {
@@ -117,7 +123,7 @@ namespace HPADotNetCore.RestApi.Controllers
                 item.Blog_Content = blog.Blog_Content;
             }
 
-            int result = db.SaveChanges();
+            int result = _db.SaveChanges();
             string message = result > 0 ? "Update Successful!" : "Update Failed!";
 
             model = new BlogResponseModel()
@@ -132,17 +138,17 @@ namespace HPADotNetCore.RestApi.Controllers
         [HttpDelete("{id}")]
         public IActionResult DeleteBlog(int id)
         {
-            AppDbContext db = new AppDbContext();
+            
             BlogResponseModel model = new BlogResponseModel();
-            BlogDataModel item = db.Blogs.FirstOrDefault(x => x.Blog_Id == id);
+            BlogDataModel item = _db.Blogs.FirstOrDefault(x => x.Blog_Id == id);
             if(item == null)
             {
                 model.IsSuccess=false;
                 model.Message = "No Data Found!";
             }
 
-            db.Blogs.Remove(item);
-            int result = db.SaveChanges();
+            _db.Blogs.Remove(item);
+            int result = _db.SaveChanges();
             string message = result > 0 ? "Delete Successful!" : "Delete Failed!";
 
             model = new BlogResponseModel()
