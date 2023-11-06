@@ -2,6 +2,7 @@
 using HPADotNetCore.ConsoleApp.DapperExamples;
 using HPADotNetCore.ConsoleApp.EFCoreExamples;
 using HPADotNetCore.ConsoleApp.HttpClientExamples;
+using HPADotNetCore.ConsoleApp.RestClientExamples;
 using System;
 using System.Threading.Tasks;
 
@@ -17,8 +18,10 @@ namespace HPADotNetCore.ConsoleApp
             //dapperExamples.Run();
             Console.WriteLine("waiting for api...");
             Console.ReadKey();
-            HttpClientExample  httplClientExample = new HttpClientExample();
-            await httplClientExample.Run();
+            //HttpClientExample  httpClientExample = new HttpClientExample();
+            RestClientExample  restClientExample = new RestClientExample();
+            //await httpClientExample.Run();//HttpClientExample  httplClientExample = new HttpClientExample();
+            await restClientExample.Run();
 
             
         }
