@@ -8,8 +8,7 @@ namespace HPADotNetCore.RestApi.Controllers
     [ApiController]
     public class BlogController : ControllerBase
     {
-        private readonly AppDbContext _db
-            ;
+        private readonly AppDbContext _db;
 
         public BlogController(AppDbContext db)
         {
@@ -21,6 +20,24 @@ namespace HPADotNetCore.RestApi.Controllers
         {
             
             var lst = _db.Blogs.ToList();
+            BlogListResponseModel model = new BlogListResponseModel()
+            {
+                IsSuccess = true,
+                Message = "Success",
+                Data = lst
+            };
+            return Ok(model);
+        }
+
+        [HttpGet("{pageNo}/{pageSize}")]
+        public IActionResult GetBlogs(int pageNo, int pageSize)
+        {
+
+            var lst = _db
+                .Blogs
+                .Skip((pageNo - 1) * pageSize)
+                .Take(pageSize)
+                .ToList();
             BlogListResponseModel model = new BlogListResponseModel()
             {
                 IsSuccess = true,
