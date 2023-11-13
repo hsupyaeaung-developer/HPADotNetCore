@@ -13,6 +13,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HPADotNetCore.WindowsFormsA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HPADotNetCore.MInimalApi", "HPADotNetCore.MInimalApi\HPADotNetCore.MInimalApi.csproj", "{E2C95EEE-1722-4F99-A5E0-9F328BE9C072}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documnets", "Documnets", "{4301EB04-4128-4CE0-9A8C-2ECE7B90281A}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
