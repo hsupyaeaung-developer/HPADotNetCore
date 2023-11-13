@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HPADotNetCore.ConsoleApp", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HPADotNetCore.RestApi", "HPADotNetCore.RestApi\HPADotNetCore.RestApi.csproj", "{D9C9CBA5-CEED-4AAA-99BD-A1287BC3FA6C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HPADotNetCore.MvcApp", "HPADotNetCore.MvcApp\HPADotNetCore.MvcApp.csproj", "{F6EC7282-164D-4EEE-B205-9286A65D8100}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HPADotNetCore.MvcApp", "HPADotNetCore.MvcApp\HPADotNetCore.MvcApp.csproj", "{F6EC7282-164D-4EEE-B205-9286A65D8100}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HPADotNetCore.WindowsFormsApp", "HPADotNetCore.WindowsFormsApp\HPADotNetCore.WindowsFormsApp.csproj", "{73328A4D-79F4-4F7C-B0EC-BA428BD409BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HPADotNetCore.MInimalApi", "HPADotNetCore.MInimalApi\HPADotNetCore.MInimalApi.csproj", "{E2C95EEE-1722-4F99-A5E0-9F328BE9C072}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{73328A4D-79F4-4F7C-B0EC-BA428BD409BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73328A4D-79F4-4F7C-B0EC-BA428BD409BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73328A4D-79F4-4F7C-B0EC-BA428BD409BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2C95EEE-1722-4F99-A5E0-9F328BE9C072}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2C95EEE-1722-4F99-A5E0-9F328BE9C072}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2C95EEE-1722-4F99-A5E0-9F328BE9C072}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2C95EEE-1722-4F99-A5E0-9F328BE9C072}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
