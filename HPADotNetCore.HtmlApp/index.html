@@ -5,10 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/icheck-bootstrap/3.0.1/icheck-bootstrap.min.css"
+        integrity="sha512-8vq2g5nHE062j3xor4XxPeZiPjmRDh6wlufQlfC6pdQ/9urJkU07NM0tEREeymP++NczacJ/Q59ul+/K2eYvcg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
     <h1>hello world</h1>
+    <!-- <div class="icheck-primary">
+        <input type="checkbox" id="someCheckboxId" />
+        <label for="someCheckboxId">Click to check</label>
+    </div> -->
+
+    <div class="icheck-primary">
+        <input type="radio" id="someRadioId1" name="someGroupName" />
+        <label for="someRadioId1">Option 1</label>
+    </div>
+    <div class="icheck-primary">
+        <input type="radio" id="someRadioId2" name="someGroupName" />
+        <label for="someRadioId2">Option 2</label>
+    </div>
+
+    <div class="icheck-primary">
+        <input type="checkbox" id="someCheckboxId" />
+        <label for="someCheckboxId"></label>
+    </div>
     <p id="test"></p>
     <input type="text" id="test2" />
     <button type="button" id="btnClick">Click</button>
@@ -16,12 +38,35 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script>
+        // Toastify({
+        //     text: "This is a toast",
+        //     className: "info",
+        //     style: {
+        //         background: "linear-gradient(to right, #00b09b, #96c93d)",
+        //     }
+        // }).showToast();
+
+        Toastify({
+            text: "This is a toast",
+            duration: 3000,
+            destination: "https://github.com/apvarun/toastify-js",
+            newWindow: true,
+            close: true,
+            gravity: "top", // `top` or `bottom`
+            position: "left", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+                background: "linear-gradient(to right, #00b09b, #96c93d)",
+            },
+            onClick: function () { } // Callback after click
+        }).showToast();
         let count = 0;
 
         let student = {
-            StudentNo : 1,
-            StudentName : 'mg mg'
+            StudentNo: 1,
+            StudentName: 'mg mg'
         };
 
         let jsonStr = JSON.stringify(student);
@@ -38,17 +83,17 @@
         var a = $('#test').html();
         var b = $('#test2').val();
 
-        console.log({a , b});
+        console.log({ a, b });
 
         fun1();
 
         console.log(fun2());
 
-        function fun1(){
+        function fun1() {
             var c = "a";
         }
 
-        function fun2(){
+        function fun2() {
             return 1;
         }
 
@@ -56,12 +101,12 @@
             console.log(2);
         }, 4000);
 
-        var interval1 = setInterval(() => {           
+        var interval1 = setInterval(() => {
             count++;
             $('#test2').val(count);
         }, 2000);
 
-        $('#btnClick').click(function(){
+        $('#btnClick').click(function () {
             clearInterval(interval1);
         })
     </script>
