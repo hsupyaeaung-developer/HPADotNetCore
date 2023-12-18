@@ -28,7 +28,7 @@ namespace HPADotNetCore.MvcApp.Controllers
                 pageCount++;
 
             model.Blogs = lst;
-            model.PageSetting = new PageSettingModel(pageNo, pageSize, pageCount, "/blog/list");
+            model.PageSetting = new PageSettingModel(pageNo, pageSize, pageCount, "/blogajax/list");
 
             return View("BlogList", model);
         }
