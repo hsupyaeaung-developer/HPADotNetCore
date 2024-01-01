@@ -1,0 +1,143 @@
+﻿@model LoginViewModel;
+@{
+    Layout = "_LoginLayout";
+    string message = null;
+    bool isSuccess = false;
+    if (TempData["Message"] != null)
+    {
+        message = TempData["Message"].ToString();
+        isSuccess = Convert.ToBoolean(TempData["IsSuccess"]);
+    }
+}
+
+@section style {
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+        }
+
+        /* body {
+            background-image: url('../image/atm-image.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+        } */
+        body {
+            background-color: #80E8FE;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        #btnCancel {
+            margin-right: 20px;
+        }
+
+        .card-body {
+            padding: 20px 30px;
+        }
+
+        .card {
+            margin-top: 100px;
+        }
+
+        .card {
+            background-color: #fff; /* Set the background color of your card */
+            border-radius: 10px; /* Set border radius for rounded corners */
+            /* Box Shadow */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* x-offset y-offset blur-radius color */
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+    </style>
+}
+
+
+<h1>ATM Management System</h1>
+<div class="container mt-3">
+        <div class="card">
+            <div class="card-body">
+            @if (message is not null)
+            {
+                <div class="alert alert-@(isSuccess ? "success" : "danger")" role="alert">
+                    @message
+                </div>
+            }
+            <h1 class="mx-auto mb-5">Account Login</h1>
+                <form action="/ATM/Login" method="post" id="myForm">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="mb-4">
+                            <input type="text" class="form-control" id="CardNumber" name="CardNumber" placeholder="Enter Account Number" onkeypress="isInputNumber(event)" @* onpaste="return false;" *@>
+                                <span id="cardNoMsg" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="mb-4">
+                            <input type="text" class="form-control" id="PinNumber" name="PinNumber" placeholder="Enter Pin Number" onkeypress="isInputNumber(event)" @* onpaste="return false;" *@>
+                                <span id="pinNoMsg" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-grid col-md-12 mx-auto mb-2">
+                        <button class="btn btn-primary" type="button" id="btnLogin">Login</button>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                        <p>Don't have an account? <a href="/atm/register" class="link-info">Register here</a></p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+@section scripts {
+    <script>
+         function isInputNumber(evt) {
+
+            var ch = String.fromCharCode(evt.which);
+
+            if (!(/[0-9]/.test(ch))) {
+                evt.preventDefault();
+            }
+
+        }
+
+        $('#btnLogin').click(function (e) {
+            var cardNo = $('#CardNumber').val();
+            var pinNo = $('#PinNumber').val();
+            var IsSubmit = true;
+            if (cardNo == null || cardNo == "" || cardNo == undefined) {
+                $('#cardNoMsg').html('Please Enter Account Number');
+                IsSubmit = false;
+            }
+            else {
+                $('#cardNoMsg').html('');
+            }
+
+            if (pinNo == null || pinNo == "" || pinNo == undefined) {
+                $('#pinNoMsg').html('Please Enter Pin Number');
+                IsSubmit = false;
+            }
+            else {
+                $('#pinNoMsg').html('');
+                if (PinNumber.length != 5) {
+                    $('#pinNoMsg').html('Pin Number must be only five digits');
+                    IsSubmit = false;
+                }
+            }
+
+            if (IsSubmit) {
+                $('#myForm').submit();
+            }
+        })
+    </script>
+}

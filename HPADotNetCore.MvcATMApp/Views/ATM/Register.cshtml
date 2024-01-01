@@ -1,0 +1,174 @@
+﻿@model ATMDataModel;
+@{
+    Layout = "_LoginLayout";
+    ViewData["Title"] = "Register Page";
+}
+
+@section style {
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+        }
+
+        body {
+            background-color: #80E8FE;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        #btnBack {
+            margin-right: 10px;
+        }
+
+        .card{
+            margin-top: 100px;
+        }
+
+        .card-body {
+            padding: 20px 30px;
+        }
+
+        .card {
+            background-color: #fff; /* Set the background color of your card */
+            border-radius: 10px; /* Set border radius for rounded corners */
+            /* Box Shadow */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* x-offset y-offset blur-radius color */
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+}
+
+<h1>ATM Management System</h1>
+<div class="container mt-3">
+    <div class="card">
+        <div class="card-body">
+            <h1 class="mx-auto mb-5">Account Register</h1>
+            <form>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="mb-4">
+                            <input type="text" class="form-control" id="creditNumber" value="@Model.CardNumber" readonly>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="mb-4">
+                            <input type="text" class="form-control" id="firstName" placeholder="Enter First Name">
+                            <span id="firstNameMsg" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="mb-4">
+                            <input type="text" class="form-control" id="lastName" placeholder="Enter Last Name">
+                            <span id="lastNameMsg" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="mb-4">
+                            <input type="text" class="form-control" id="pinNumber" placeholder="Enter Pin Number" onkeypress="isInputNumber(event)">
+                            <span id="pinNoMsg" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="float-end mt-2">
+                    <div class="col-md-12 mx-auto mb-2">
+                        <a href="/atm/login">
+                        <button class="btn btn-secondary" type="button" id="btnBack">Back</button>
+                        </a>
+                        <button type="button" class="btn btn-success ladda-button" data-style="expand-left" id="btnSave">
+                            <span class="ladda-label">Save</span>
+                        </button>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+@section scripts {
+    <script>
+        function isInputNumber(evt) {
+
+            var ch = String.fromCharCode(evt.which);
+
+            if (!(/[0-9]/.test(ch))) {
+                evt.preventDefault();
+            }
+
+        }
+
+        $('#btnSave').click(function (e) {
+            e.preventDefault();
+
+            CardNumber = $('#creditNumber').val();
+            FirstName = $('#firstName').val();
+            LastName = $('#lastName').val();
+            PinNumber = $('#pinNumber').val();
+            
+            var _reqModel = {
+                CardNumber: $('#creditNumber').val(),
+                FirstName: $('#firstName').val(),
+                LastName: $('#lastName').val(),
+                PinNumber: $('#pinNumber').val(),
+            };
+            var isValid = true;
+            if (FirstName == null || FirstName == "" || FirstName == undefined) {
+                $('#firstNameMsg').html('Please Enter First Name');
+                isValid = false;
+            }
+            else {
+                $('#firstNameMsg').html('');
+            }
+            if (LastName == null || LastName == "" || LastName == undefined) {
+                $('#lastNameMsg').html('Please Enter Last Name');
+                isValid = false;
+            }
+            else {
+                $('#lastNameMsg').html('');
+            }
+            if (PinNumber == null || PinNumber == "" || PinNumber == undefined) {
+                $('#pinNoMsg').html('Please Enter Pin Number');
+                isValid = false;
+            }
+            else {
+                $('#pinNoMsg').html('');
+                if (PinNumber.length != 5) {
+                    $('#pinNoMsg').html('Pin Number must be only five digits');
+                    isValid = false;
+                }
+            }
+
+            if(!isValid) {
+                return;
+            }
+            var l = Ladda.create(this);
+            l.start();
+
+            $.ajax({
+                url: '/atm/register',
+                type: 'POST',
+                data: {
+                    reqModel: _reqModel
+                },
+                success: function (data) {
+                    l.stop();
+                    showMessage(data, "/atm/login");
+                },
+                error: function (request, status, error) {
+                    console.log({ request, status, error });
+                }
+            });
+        })
+    </script>
+}

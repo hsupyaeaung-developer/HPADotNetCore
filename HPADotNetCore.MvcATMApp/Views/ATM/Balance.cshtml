@@ -1,0 +1,66 @@
+﻿@model BalanceViewModel
+
+@section style {
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+        }
+
+        body {
+            background-color: #80E8FE;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        #btnBack {
+            margin-right: 10px;
+        }
+
+        .card {
+            margin-top: 100px;
+        }
+
+        .card-body {
+            padding: 20px 30px;
+        }
+
+        .form-control::after {
+            content: 'MMK';
+        }
+
+        .card {
+            background-color: #fff; /* Set the background color of your card */
+            border-radius: 10px; /* Set border radius for rounded corners */
+            /* Box Shadow */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* x-offset y-offset blur-radius color */
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            color: green;
+            font-size: 20px;
+        }
+    </style>
+}
+
+
+<div class="container mt-3">
+<div class="card">
+    <div class="card-body">
+            <h1>Current Balance</h1>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="mb-4">
+                        <p>@Model.CurrentAmount Kyats</p>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
+</div>

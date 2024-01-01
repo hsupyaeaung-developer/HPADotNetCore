@@ -1,0 +1,133 @@
+﻿
+@{
+    string message = null;
+    bool isSuccess = false;
+    if (TempData["Message"] != null)
+    {
+        message = TempData["Message"].ToString();
+        isSuccess = Convert.ToBoolean(TempData["IsSuccess"]);
+    }
+}
+@section style {
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+        }
+        body {
+            background-color: #80E8FE;
+        }
+
+        label {
+            font-weight: bold;
+        }
+        .card {
+            margin-top: 100px;
+        }
+
+        .card-body {
+            padding: 20px 30px;
+        }
+
+        .card {
+            background-color: #fff; /* Set the background color of your card */
+            border-radius: 10px; /* Set border radius for rounded corners */
+            /* Box Shadow */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* x-offset y-offset blur-radius color */
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+}
+
+@* @if (message is not null)
+{
+    <div class="alert alert-@(isSuccess ? "success" : "danger")" role="alert">
+        @message
+    </div>
+} *@
+<div class="container mt-3">
+    <div class="card">
+        <div class="card-body">
+            <h1 class="mx-auto mb-5">Deposit</h1>
+            <form>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="mb-4">
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" id="amount" placeholder="Enter Deposit Amount" aria-label="Enter Deposit Amount" aria-describedby="basic-addon2">
+                                <span class="input-group-text" id="basic-addon2">MMK</span>
+                            </div>
+                            <span id="DepositAmountMsg" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="float-end mt-2">
+                    <div class="col-md-12 mx-auto mb-2">
+                        <button type="button" class="btn btn-success ladda-button" data-style="expand-left" id="btnSave">
+                            <span class="ladda-label">Save</span>
+                        </button>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
+
+
+@section scripts {
+    <script>
+        $(document).ready(function () {
+            var inputField = document.querySelector('input')
+            inputField.oninput = function () {
+                var removeChar = this.value.replace(/[^0-9\.]/g, '') // This is to remove alphabets and special characters.
+                var removeDot = removeChar.replace(/\./g, '') // This is to remove "DOT"
+                this.value = removeDot
+
+                var formatedNumber = this.value.replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                // console.log(formatedNumber);
+                this.value = formatedNumber;
+            }
+        });
+
+        $('#btnSave').click(function (e) {
+            e.preventDefault();
+
+            var _reqModel = {
+                DepositAmount: $('#amount').val(),
+               
+            };
+
+            var amount = $('#amount').val();
+            if (amount == null || amount == "" || amount == undefined) {
+                $('#DepositAmountMsg').html('Please Enter Amount');
+                return;
+            }
+            else {
+                $('#DepositAmountMsg').html('');
+            }
+
+            var l = Ladda.create(this);
+            l.start();
+
+            $.ajax({
+                url: '/atm/deposit',
+                type: 'POST',
+                data: {
+                    reqModel: _reqModel
+                },
+                success: function (data) {
+                    l.stop();
+                    showMessage(data, "/atm/deposit");
+                },
+                error: function (request, status, error) {
+                    console.log({ request, status, error });
+                }
+            });
+        })
+    </script>
+}

@@ -1,0 +1,102 @@
+﻿@model WithdrawViewModel
+@{
+    string message = null;
+    bool isSuccess = false;
+    if (TempData["Message"] != null)
+    {
+        message = TempData["Message"].ToString();
+        isSuccess = Convert.ToBoolean(TempData["IsSuccess"]);
+    }
+}
+@section style {
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+        }
+
+        body {
+            background-color: #80E8FE;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        #btnBack {
+            margin-right: 10px;
+        }
+
+        .card {
+            margin-top: 100px;
+        }
+
+        .card-body {
+            padding: 20px 30px;
+        }
+
+        .card {
+            background-color: #fff; /* Set the background color of your card */
+            border-radius: 10px; /* Set border radius for rounded corners */
+            /* Box Shadow */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* x-offset y-offset blur-radius color */
+        }
+
+        p {
+            color: green;
+            font-size: 20px;
+        }
+    </style>
+}
+
+
+<div class="container mt-3">
+    <div class="card">
+        <div class="card-body">
+            @if (message is not null)
+            {
+                <div class="alert alert-@(isSuccess ? "success" : "danger")" role="alert">
+                    @message
+                </div>
+            }
+            <h1 class="mx-auto mb-5">Withdraw Details</h1>
+            <form method="post" action="/ATM/WithdrawConfirm">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="mb-4">
+                            <p>Account Number</p>
+                            <p>@Model.CardNumber</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="mb-4">
+                            <p>Current Amount</p>
+                            <p>@Model.CurrentBalance</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="mb-4">
+                            <p>WithDraw Amount</p>
+                            <p>@Model.WithdrawAmount</p>
+                            <input type="hidden" name="WithdrawAmount" value="@Model.WithdrawAmount" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="float-end mt-2">
+                    <div class="col-md-12 mx-auto mb-2">
+                        <a href="/atm/withdraw">
+                            <button class="btn btn-secondary" type="button" id="btnBack">OK</button>
+                        </a>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
