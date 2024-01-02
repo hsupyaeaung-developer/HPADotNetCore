@@ -39,7 +39,7 @@
         }
 
         .card {
-            margin-top: 100px;
+            margin-top: 150px;
         }
 
         .card {
@@ -49,15 +49,30 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* x-offset y-offset blur-radius color */
         }
 
-        h1 {
+        h1,h4{
             text-align: center;
+            font-family: "Times New Roman", Times, serif;
         }
 
+        h1 {
+            text-align: center;
+            font-family: "Times New Roman", Times, serif;
+            font-size:70px;
+        }
+        .header {
+            display:flex;
+            flex-direction:column;
+            position:absolute;
+            width:100%;
+        }
     </style>
 }
 
 
-<h1>ATM Management System</h1>
+<div class="header">
+    <h1>ATM</h1>
+    <h4>Management System</h4>
+</div>
 <div class="container mt-3">
         <div class="card">
             <div class="card-body">
@@ -67,7 +82,7 @@
                     @message
                 </div>
             }
-            <h1 class="mx-auto mb-5">Account Login</h1>
+            <h1 class="mx-auto mb-5" style="font-size:35px;">Account Login</h1>
                 <form action="/ATM/Login" method="post" id="myForm">
                     <div class="row">
                         <div class="col-md-12">
