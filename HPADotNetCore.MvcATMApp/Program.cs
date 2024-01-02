@@ -37,6 +37,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=ATM}/{action=Login}/{id?}");
+    pattern: "{controller=ATM}/{action=LoginPage}/{id?}");
 
 app.Run();

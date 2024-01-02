@@ -15,6 +15,8 @@ namespace HPADotNetCore.MvcATMApp.Controllers
             _contextAccessor = contextAccessor;
         }
 
+        [HttpGet]
+        [ActionName("LoginPage")]
         public IActionResult Login()
         {
             LoginViewModel model = new LoginViewModel();
@@ -26,7 +28,8 @@ namespace HPADotNetCore.MvcATMApp.Controllers
         {
             _contextAccessor.HttpContext.Session.Remove("CardNumber");
 
-            return Redirect("/ATM/Logout");
+            LoginViewModel model = new LoginViewModel();
+            return View("LoginPage", model);
 
         }
         public IActionResult Deposit()
@@ -141,7 +144,7 @@ namespace HPADotNetCore.MvcATMApp.Controllers
             else
             {
                 _contextAccessor.HttpContext.Session.SetString("CardNumber", atm.CardNumber);
-                TempData["Message"] = "Success!";
+                
             }
             return View("Dashboard");
         }
