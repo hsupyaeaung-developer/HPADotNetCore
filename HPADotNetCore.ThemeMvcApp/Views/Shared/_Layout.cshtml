@@ -1,0 +1,1744 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - HPADotNetCore.ThemeMvcApp</title>
+    <link rel="icon" href="theme/assets/images/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="theme/assets/images/favicon.png" type="image/x-icon">
+    <title>Xolo - Premium Admin Template</title>
+    <!-- Google font-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700&amp;display=swap" rel="stylesheet">
+    <!-- Font Awesome-->
+    <link rel="stylesheet" type="text/css" href="theme/assets/css/fontawesome.css">
+    <!-- ico-font-->
+    <link rel="stylesheet" type="text/css" href="theme/assets/css/icofont.css">
+    <!-- Themify icon-->
+    <link rel="stylesheet" type="text/css" href="theme/assets/css/themify.css">
+    <!-- Flag icon-->
+    <link rel="stylesheet" type="text/css" href="theme/assets/css/flag-icon.css">
+    <!-- Feather icon-->
+    <link rel="stylesheet" type="text/css" href="theme/assets/css/feather-icon.css">
+    <!-- Plugins css start-->
+    <link rel="stylesheet" type="text/css" href="theme/assets/css/chartist.css">
+    <link rel="stylesheet" type="text/css" href="theme/assets/css/prism.css">
+    <!-- Plugins css Ends-->
+    <!-- Bootstrap css-->
+    <link rel="stylesheet" type="text/css" href="theme/assets/css/bootstrap.css">
+    <!-- App css-->
+    <link rel="stylesheet" type="text/css" href="theme/assets/css/style.css">
+    <link id="color" rel="stylesheet" href="theme/assets/css/color-1.css" media="screen">
+    <!-- Responsive css-->
+    <link rel="stylesheet" type="text/css" href="theme/assets/css/responsive.css">
+</head>
+<body>
+    <!-- Loader starts-->
+    <div class="loader-wrapper">
+        <div class="theme-loader"></div>
+    </div>
+    <!-- Loader ends-->
+
+    <div class="buy-now"><a href="https://1.envato.market/a1BQ0R" class="btn btn-pill btn-primary btn-air-primary" target="_blank">Purchase</a></div>
+
+
+    <!-- page-wrapper Start-->
+    <div class="page-wrapper compact-wrapper" id="pageWrapper">
+        <!-- Page Header Start-->
+        <div class="page-main-header">
+            <div class="main-header-right">
+                <div class="main-header-left">
+                    <div class="logo-wrapper"><a href="index.html"><img src="theme/assets/images/logo/logo.png" alt=""></a></div>
+                </div>
+                <div class="mobile-sidebar">
+                    <div class="flex-grow-1 text-end switch-sm">
+                        <label class="switch">
+                            <input id="sidebar-toggle" type="checkbox" data-bs-toggle=".container" checked="checked"><span class="switch-state"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="nav-right col pull-right right-menu">
+                    <ul class="nav-menus">
+                        <li class="px-0">
+                            <form class="form-inline search-form">
+                                <input class="form-control-plaintext" placeholder="Search....."><i class="close-search" data-feather="x"></i>
+                            </form><span class="mobile-search"><i data-feather="search"></i></span>
+                        </li>
+                        <li class="onhover-dropdown">
+                            <i data-feather="bell"></i>
+                            <ul class="notification-dropdown onhover-show-div">
+                                <li class="d-block">
+                                    <h6 class="f-w-600">Notifications</h6><span class="f-12">You have 2 unread messages</span>
+                                </li>
+                                <li>
+                                    <p class="mb-0"><i class="fa fa-circle-o me-3 font-primary"> </i>Delivery processing <span class="pull-right">10 min.</span></p>
+                                </li>
+                                <li>
+                                    <p class="mb-0"><i class="fa fa-circle-o me-3 font-success"></i>Order Complete<span class="pull-right">1 hr</span></p>
+                                </li>
+                                <li>
+                                    <p class="mb-0"><i class="fa fa-circle-o me-3 font-info"></i>Tickets Generated<span class="pull-right">3 hr</span></p>
+                                </li>
+                                <li>
+                                    <p class="mb-0"><i class="fa fa-circle-o me-3 font-warning"></i>Delivery Complete<span class="pull-right">6 hr</span></p>
+                                </li>
+                                <li class="bg-light txt-dark"><a href="#">All </a> notification</li>
+                            </ul>
+                        </li>
+                        <li class="onhover-dropdown">
+                            <i data-feather="message-circle"></i>
+                            <ul class="chat-dropdown onhover-show-div p-t-20 p-b-20">
+                                <li>
+                                    <div class="d-flex align-items-start">
+                                        <img class="img-fluid rounded-circle me-3" src="theme/assets/images/user/2.jpg" alt="">
+                                        <div class="status-circle online"></div>
+                                        <div class="flex-grow-1">
+                                            <span class="f-w-600">Erica Hughes</span>
+                                            <p class="f-12 mb-0 light-font">There are many variations of passages...</p>
+                                            <p class="f-12 mb-0 font-primary">1 hr ago</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex align-items-start">
+                                        <img class="img-fluid rounded-circle me-3" src="theme/assets/images/user/1.jpg" alt="">
+                                        <div class="status-circle away"></div>
+                                        <div class="flex-grow-1">
+                                            <span class="f-w-600">Kori Thomas</span>
+                                            <p class="f-12 mb-0 light-font">There are many variations of passages...</p>
+                                            <p class="f-12 mb-0 font-primary">58 mins ago</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex align-items-start">
+                                        <img class="img-fluid rounded-circle me-3" src="theme/assets/images/user/4.jpg" alt="">
+                                        <div class="status-circle offline"></div>
+                                        <div class="flex-grow-1">
+                                            <span class="f-w-600">Ain Chavez</span>
+                                            <p class="f-12 mb-0 light-font">There are many variations of passages...</p>
+                                            <p class="f-12 mb-0 font-primary">32 mins ago</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="light-font text-center">Mark all as read      </li>
+                            </ul>
+                        </li>
+                        <li><a class="text-dark" href="#!" onclick="javascript:toggleFullScreen()"><i data-feather="maximize"></i></a></li>
+                        <li class="theme-setting"><i data-feather="settings"></i></li>
+                        <li class="onhover-dropdown px-0">
+                            <span class="d-flex user-header"><img class="me-2 rounded-circle img-35" src="theme/assets/images/dashboard/user.png" alt=""><span class="flex-grow-1"><span class="f-12 f-w-600">Elana Saint</span><span class="d-block">Admin</span></span></span>
+                            <ul class="profile-dropdown onhover-show-div">
+                                <li><i data-feather="user"> </i>Profile</li>
+                                <li class="f-w-600">Home</li>
+                                <li class="f-12"><i data-feather="chevron-right"> </i>Inbox</li>
+                                <li class="f-12"><i data-feather="chevron-right"> </i>Taskboard</li>
+                                <li class="f-12"><i data-feather="chevron-right"> </i>Settings</li>
+                                <li><i data-feather="log-in"></i>Log in  </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="d-lg-none mobile-toggle pull-right"><i data-feather="more-horizontal"></i></div>
+            </div>
+        </div>
+        <!-- Page Header Ends                              -->
+        <!-- Page Body Start-->
+        <div class="page-body-wrapper sidebar-icon">
+            <nav-menus></nav-menus>
+            <header class="main-nav">
+                <nav>
+                    <div class="main-navbar">
+                        <div class="left-arrow" id="left-arrow"><i data-feather="arrow-left"></i></div>
+                        <div id="mainnav">
+                            <ul class="nav-menu custom-scrollbar">
+                                <li class="back-btn">
+                                    <div class="mobile-back text-end"><span>Back</span><i class="fa fa-angle-right ps-2" aria-hidden="true"></i></div>
+                                </li>
+                                <li class="dropdown">
+                                    <a class="nav-link menu-title" href="#"><i data-feather="home"></i><span>Dashboard</span></a>
+                                    <ul class="nav-submenu menu-content">
+                                        <li><a href="index.html">Business</a></li>
+                                        <li><a href="dashboard-02.html">Helpdesk</a></li>
+                                        <li><a href="dashboard-03.html">Social</a></li>
+                                        <li><a href="dashboard-04.html">Enterprise</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a class="nav-link menu-title" href="#"><i data-feather="airplay"></i><span>Widgets</span></a>
+                                    <ul class="nav-submenu menu-content">
+                                        <li><a href="general-widget.html">General</a></li>
+                                        <li><a href="chart-widget.html">Chart</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a class="nav-link menu-title" href="#"><i data-feather="box"></i><span>Ui Kits</span></a>
+                                    <ul class="nav-submenu menu-content">
+                                        <li><a href="typography.html">Typography</a></li>
+                                        <li><a href="avatars.html">Avatars</a></li>
+                                        <li><a href="helper-classes.html">helper classes</a></li>
+                                        <li><a href="grid.html">Grid</a></li>
+                                        <li><a href="tag-pills.html">Tag & pills</a></li>
+                                        <li><a href="progress-bar.html">Progress</a></li>
+                                        <li><a href="modal.html">Modal</a></li>
+                                        <li><a href="alert.html">Alert</a></li>
+                                        <li><a href="popover.html">Popover</a></li>
+                                        <li><a href="tooltip.html">Tooltip</a></li>
+                                        <li><a href="loader.html">Spinners</a></li>
+                                        <li><a href="dropdown.html">Dropdown</a></li>
+                                        <li><a href="according.html">Accordion</a></li>
+                                        <li>
+                                            <a class="submenu-title" href="#">Tabs<span class="sub-arrow"><i class="fa fa-chevron-right"></i></span></a>
+                                            <ul class="nav-sub-childmenu submenu-content">
+                                                <li><a href="tab-bootstrap.html">Bootstrap Tabs</a></li>
+                                                <li><a href="tab-material.html">Line Tabs</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="navs.html">Navs</a></li>
+                                        <li><a href="box-shadow.html">Shadow</a></li>
+                                        <li><a href="list.html">Lists</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a class="nav-link menu-title" href="#"><i data-feather="folder-plus"></i><span>Bonus Ui</span><span class="badge badge-success">Hot</span></a>
+                                    <ul class="nav-submenu menu-content">
+                                        <li><a href="scrollable.html">Scrollable</a></li>
+                                        <li><a href="tree.html">Tree view</a></li>
+                                        <li><a href="bootstrap-notify.html">Bootstrap Notify</a></li>
+                                        <li><a href="rating.html">Rating</a></li>
+                                        <li><a href="dropzone.html">dropzone</a></li>
+                                        <li><a href="tour.html">Tour</a></li>
+                                        <li><a href="sweet-alert2.html">SweetAlert2</a></li>
+                                        <li><a href="modal-animated.html">Animated Modal</a></li>
+                                        <li><a href="owl-carousel.html">Owl Carousel</a></li>
+                                        <li><a href="ribbons.html">Ribbons</a></li>
+                                        <li><a href="pagination.html">Pagination</a></li>
+                                        <li><a href="steps.html">Steps</a></li>
+                                        <li><a href="breadcrumb.html">Breadcrumb</a></li>
+                                        <li><a href="range-slider.html">Range Slider</a></li>
+                                        <li><a href="image-cropper.html">Image cropper</a></li>
+                                        <li><a href="sticky.html">Sticky</a></li>
+                                        <li><a href="basic-card.html">Basic Card</a></li>
+                                        <li><a href="creative-card.html">Creative Card</a></li>
+                                        <li><a href="tabbed-card.html">Tabbed Card</a></li>
+                                        <li><a href="dragable-card.html">Draggable Card</a></li>
+                                        <li>
+                                            <a class="submenu-title" href="#">Timeline<span class="sub-arrow"><i class="fa fa-chevron-right"></i></span></a>
+                                            <ul class="nav-sub-childmenu submenu-content">
+                                                <li><a href="timeline-v-1.html">Timeline 1</a></li>
+                                                <li><a href="timeline-v-2.html">Timeline 2</a></li>
+                                                <li><a href="timeline-small.html">Timeline 3</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a class="nav-link menu-title" href="#"><i data-feather="layout"></i><span>Page layout</span></a>
+                                    <ul class="nav-submenu menu-content">
+                                        <li><a href="box-layout.html">Boxed</a></li>
+                                        <li><a href="layout-rtl.html">RTL</a></li>
+                                        <li><a href="layout-light.html">Light Layout</a></li>
+                                        <li><a href="layout-dark.html">Dark Layout</a></li>
+                                        <li><a href="hide-on-scroll.html">Hide Nav Scroll</a></li>
+                                        <li><a href="footer-light.html">Footer Light</a></li>
+                                        <li><a href="footer-dark.html">Footer Dark</a></li>
+                                        <li><a href="footer-fixed.html">Footer Fixed</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a class="nav-link menu-title" href="#"><i data-feather="edit-3"></i><span>Builders</span></a>
+                                    <ul class="nav-submenu menu-content">
+                                        <li><a href="form-builder-1.html"> Form Builder 1</a></li>
+                                        <li><a href="form-builder-2.html"> Form Builder 2</a></li>
+                                        <li><a href="pagebuild.html">Page Builder</a></li>
+                                        <li><a href="button-builder.html">Button Builder</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a class="nav-link menu-title" href="#"><i data-feather="cloud-drizzle"></i><span>Animation</span></a>
+                                    <ul class="nav-submenu menu-content">
+                                        <li><a href="animate.html">Animate</a></li>
+                                        <li><a href="scroll-reval.html">Scroll Reveal</a></li>
+                                        <li><a href="AOS.html">AOS animation</a></li>
+                                        <li><a href="tilt.html">Tilt Animation</a></li>
+                                        <li><a href="wow.html">Wow Animation</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a class="nav-link menu-title" href="#"><i data-feather="command"></i><span>Icons</span></a>
+                                    <ul class="nav-submenu menu-content">
+                                        <li><a href="flag-icon.html">Flag icon</a></li>
+                                        <li><a href="font-awesome.html">Fontawesome Icon</a></li>
+                                        <li><a href="ico-icon.html">Ico Icon</a></li>
+                                        <li><a href="themify-icon.html">Thimify Icon</a></li>
+                                        <li><a href="feather-icon.html">Feather icon</a></li>
+                                        <li><a href="whether-icon.html">Whether Icon</a></li>
+                                        <li><a href="simple-line-icon.html">Simple line Icon</a></li>
+                                        <li><a href="material-design-icon.html">Material Design Icon</a></li>
+                                        <li><a href="pe7-icon.html">pe7 icon</a></li>
+                                        <li><a href="typicons-icon.html">Typicons icon</a></li>
+                                        <li><a href="ionic-icon.html">Ionic icon</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a class="nav-link menu-title" href="#"><i data-feather="cloud"></i><span>Buttons</span></a>
+                                    <ul class="nav-submenu menu-content">
+                                        <li><a href="buttons.html">Default Style</a></li>
+                                        <li><a href="buttons-flat.html">Flat Style</a></li>
+                                        <li><a href="buttons-edge.html">Edge Style</a></li>
+                                        <li><a href="raised-button.html">Raised Style</a></li>
+                                        <li><a href="button-group.html">Button Group</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a class="nav-link menu-title" href="#"><i data-feather="file-text"></i><span>Forms</span></a>
+                                    <ul class="nav-submenu menu-content">
+                                        <li>
+                                            <a class="submenu-title" href="#">Form Controls<span class="sub-arrow"><i class="fa fa-chevron-right"></i></span></a>
+                                            <ul class="nav-sub-childmenu submenu-content">
+                                                <li><a href="form-validation.html">Form Validation</a></li>
+                                                <li><a href="base-input.html">Base Inputs</a></li>
+                                                <li><a href="radio-checkbox-control.html">Checkbox & Radio</a></li>
+                                                <li><a href="input-group.html">Input Groups</a></li>
+                                                <li><a href="megaoptions.html">Mega Options</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a class="submenu-title" href="#">Form Widgets<span class="sub-arrow"><i class="fa fa-chevron-right"></i></span></a>
+                                            <ul class="nav-sub-childmenu submenu-content">
+                                                <li><a href="datepicker.html">Datepicker</a></li>
+                                                <li><a href="time-picker.html">Timepicker</a></li>
+                                                <li><a href="datetimepicker.html">Datetimepicker</a></li>
+                                                <li><a href="daterangepicker.html">Daterangepicker</a></li>
+                                                <li><a href="touchspin.html">Touchspin</a></li>
+                                                <li><a href="select2.html">Select2</a></li>
+                                                <li><a href="switch.html">Switch</a></li>
+                                                <li><a href="typeahead.html">Typeahead</a></li>
+                                                <li><a href="clipboard.html">Clipboard</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a class="submenu-title" href="#">Form layout<span class="sub-arrow"><i class="fa fa-chevron-right"></i></span></a>
+                                            <ul class="nav-sub-childmenu submenu-content">
+                                                <li><a href="default-form.html">Default Forms</a></li>
+                                                <li><a href="form-wizard.html">Form Wizard 1</a></li>
+                                                <li><a href="form-wizard-two.html">Form Wizard 2</a></li>
+                                                <li><a href="form-wizard-three.html">Form Wizard 3</a></li>
+                                                <li><a href="form-wizard-four.html">Form Wizard 4</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a class="nav-link menu-title" href="#"><i data-feather="server"></i><span>Tables</span></a>
+                                    <ul class="nav-submenu menu-content">
+                                        <li>
+                                            <a class="submenu-title" href="#">Bootstrap Tables<span class="sub-arrow"><i class="fa fa-chevron-right"></i></span></a>
+                                            <ul class="nav-sub-childmenu submenu-content">
+                                                <li><a href="bootstrap-basic-table.html">Basic Tables</a></li>
+                                                <li><a href="bootstrap-sizing-table.html">Sizing Tables</a></li>
+                                                <li><a href="bootstrap-border-table.html">Border Tables</a></li>
+                                                <li><a href="bootstrap-styling-table.html">Styling Tables</a></li>
+                                                <li><a href="table-components.html">Table components</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a class="submenu-title" href="#">Data Tables<span class="sub-arrow"><i class="fa fa-chevron-right"></i></span></a>
+                                            <ul class="nav-sub-childmenu submenu-content">
+                                                <li><a href="datatable-basic-init.html">Basic Init</a></li>
+                                                <li><a href="datatable-advance.html">Advance Init</a></li>
+                                                <li><a href="datatable-styling.html">Styling</a></li>
+                                                <li><a href="datatable-AJAX.html">AJAX</a></li>
+                                                <li><a href="datatable-server-side.html">Server Side</a></li>
+                                                <li><a href="datatable-plugin.html">Plug-in</a></li>
+                                                <li><a href="datatable-API.html">API</a></li>
+                                                <li><a href="datatable-data-source.html">Data Sources</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a class="submenu-title" href="#">Ex. Data Tables<span class="sub-arrow"><i class="fa fa-chevron-right"></i></span></a>
+                                            <ul class="nav-sub-childmenu submenu-content">
+                                                <li><a href="datatable-ext-autofill.html">Auto Fill</a></li>
+                                                <li><a href="datatable-ext-basic-button.html">Basic Button</a></li>
+                                                <li><a href="datatable-ext-col-reorder.html">Column Reorder</a></li>
+                                                <li><a href="datatable-ext-fixed-header.html">Fixed Header</a></li>
+                                                <li><a href="datatable-ext-html-5-data-export.html">HTML 5 Export</a></li>
+                                                <li><a href="datatable-ext-key-table.html">Key Table</a></li>
+                                                <li><a href="datatable-ext-responsive.html">Responsive</a></li>
+                                                <li><a href="datatable-ext-row-reorder.html">Row Reorder</a></li>
+                                                <li><a href="datatable-ext-scroller.html">Scroller</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="jsgrid-table.html">Js Grid Table</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a class="nav-link menu-title" href="#"><i data-feather="bar-chart"></i><span>Charts</span></a>
+                                    <ul class="nav-submenu menu-content">
+                                        <li><a href="chart-apex.html">Apex Chart</a></li>
+                                        <li><a href="chart-google.html">Google Chart</a></li>
+                                        <li><a href="chart-sparkline.html">Sparkline chart</a></li>
+                                        <li><a href="chart-flot.html">Flot Chart</a></li>
+                                        <li><a href="chart-knob.html">Knob Chart</a></li>
+                                        <li><a href="chart-morris.html">Morris Chart</a></li>
+                                        <li><a href="chartjs.html">Chatjs Chart</a></li>
+                                        <li><a href="chartist.html">Chartist Chart</a></li>
+                                        <li><a href="chart-peity.html">Peity Chart        </a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a class="nav-link menu-title" href="#"><i data-feather="grid"> </i><span>Pages</span><span class="badge badge-danger">New</span></a>
+                                    <ul class="nav-submenu menu-content">
+                                        <li><a href="landing-page.html">Landing page</a></li>
+                                        <li><a href="sample-page.html">Sample page</a></li>
+                                        <li><a href="internationalization.html">Internationalization</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a class="nav-link menu-title" href="#"><i data-feather="users"> </i><span>Apps</span></a>
+                                    <ul class="nav-submenu menu-content">
+                                        <li><a href="bookmark.html">Bookmarks</a></li>
+                                        <li><a href="contacts.html">Contacts</a></li>
+                                        <li><a href="task.html">Tasks</a></li>
+                                        <li>
+                                            <a class="submenu-title" href="#">Maps<span class="sub-arrow"><i class="fa fa-chevron-right"></i></span></a>
+                                            <ul class="nav-sub-childmenu submenu-content">
+                                                <li><a href="map-js.html">Maps JS</a></li>
+                                                <li><a href="vector-map.html">Vector Maps     </a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a class="submenu-title" href="#">Email<span class="sub-arrow"><i class="fa fa-chevron-right"></i></span></a>
+                                            <ul class="nav-sub-childmenu submenu-content">
+                                                <li><a href="email-application.html">Email App</a></li>
+                                                <li><a href="email-compose.html">Email Compose</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a class="submenu-title" href="#">Ecommerce<span class="sub-arrow"><i class="fa fa-chevron-right"></i></span></a>
+                                            <ul class="nav-sub-childmenu submenu-content">
+                                                <li><a href="product.html">Product</a></li>
+                                                <li><a href="product-page.html">Product page</a></li>
+                                                <li><a href="list-products.html">Product list</a></li>
+                                                <li><a href="payment-details.html">Payment Details</a></li>
+                                                <li><a href="order-history.html">Order History</a></li>
+                                                <li><a href="invoice-template.html">Invoice</a></li>
+                                                <li><a href="cart.html">Cart</a></li>
+                                                <li><a href="list-wish.html">Wishlist</a></li>
+                                                <li><a href="checkout.html">Checkout</a></li>
+                                                <li><a href="pricing.html">Pricing</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a class="submenu-title" href="#">Blog</a>
+                                            <ul class="nav-sub-childmenu submenu-content">
+                                                <li><a href="blog.html">Blog Details</a></li>
+                                                <li><a href="blog-single.html">Blog Single</a></li>
+                                                <li><a href="add-post.html">Add Post</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a class="submenu-title" href="#">Job Search</a>
+                                            <ul class="nav-sub-childmenu submenu-content">
+                                                <li><a href="job-cards-view.html">Cards view</a></li>
+                                                <li><a href="job-list-view.html">List View</a></li>
+                                                <li><a href="job-details.html">Job Details</a></li>
+                                                <li><a href="job-apply.html">Apply</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a class="submenu-title" href="#">Learning</a>
+                                            <ul class="nav-sub-childmenu submenu-content">
+                                                <li><a href="learning-list-view.html">Learning List</a></li>
+                                                <li><a href="learning-detailed.html">Detailed Course</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a class="submenu-title" href="#">Gallery</a>
+                                            <ul class="nav-sub-childmenu submenu-content">
+                                                <li><a href="gallery.html">Gallery Grid</a></li>
+                                                <li><a href="gallery-with-description.html">Gallery Grid Desc</a></li>
+                                                <li><a href="gallery-masonry.html">Masonry Gallery</a></li>
+                                                <li><a href="masonry-gallery-with-disc.html">Masonry with Desc</a></li>
+                                                <li><a href="gallery-hover.html">Hover Effects</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a class="submenu-title" href="#">Chat<span class="sub-arrow"><i class="fa fa-chevron-right"></i></span></a>
+                                            <ul class="nav-sub-childmenu submenu-content">
+                                                <li><a href="chat.html">Chat App</a></li>
+                                                <li><a href="chat-video.html">Video chat</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="calendar-basic.html">Calender</a></li>
+                                        <li>
+                                            <a class="submenu-title" href="#">Users<span class="sub-arrow"><i class="fa fa-chevron-right"></i></span></a>
+                                            <ul class="nav-sub-childmenu submenu-content">
+                                                <li><a href="user-profile.html">Users Profile</a></li>
+                                                <li><a href="edit-profile.html">Users Edit</a></li>
+                                                <li><a href="user-cards.html">Users Cards</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a class="submenu-title" href="#">Editors<span class="sub-arrow"><i class="fa fa-chevron-right"></i></span></a>
+                                            <ul class="nav-sub-childmenu submenu-content">
+                                                <li><a href="ckeditor.html">CK editor</a></li>
+                                                <li><a href="simple-MDE.html">MDE editor</a></li>
+                                                <li><a href="ace-code-editor.html">ACE code editor</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="social-app.html">Social App</a></li>
+                                        <li><a href="to-do.html">To-Do</a></li>
+                                        <li><a href="faq.html">FAQ</a></li>
+                                        <li><a href="knowledgebase.html">Knowledgebase</a></li>
+                                        <li><a href="support-ticket.html">Support Ticket</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a class="nav-link menu-title link-nav" href="../starter-kit/index.html" target="_blank"><i data-feather="anchor"></i><span>Starter kit</span></a></li>
+                                <li class="mega-menu">
+                                    <a class="nav-link menu-title" href="#"><i data-feather="layers"></i><span>Others</span></a>
+                                    <div class="mega-menu-container menu-content">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col mega-box">
+                                                    <div class="link-section">
+                                                        <div class="submenu-title">
+                                                            <h5>Search Pages</h5>
+                                                        </div>
+                                                        <ul class="submenu-content opensubmegamenu">
+                                                            <li><a href="search.html">Search Website</a></li>
+                                                            <li><a href="search-images.html">Search Images</a></li>
+                                                            <li><a href="search-video.html">Search Video</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col mega-box">
+                                                    <div class="link-section">
+                                                        <div class="submenu-title">
+                                                            <h5>Error Page</h5>
+                                                        </div>
+                                                        <ul class="submenu-content opensubmegamenu">
+                                                            <li><a href="error-400.html">Error 400</a></li>
+                                                            <li><a href="error-401.html">Error 401</a></li>
+                                                            <li><a href="error-403.html">Error 403</a></li>
+                                                            <li><a href="error-404.html">Error 404</a></li>
+                                                            <li><a href="error-500.html">Error 500</a></li>
+                                                            <li><a href="error-503.html">Error 503</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col mega-box">
+                                                    <div class="link-section">
+                                                        <div class="submenu-title">
+                                                            <h5> Authentication</h5>
+                                                        </div>
+                                                        <ul class="submenu-content opensubmegamenu">
+                                                            <li><a href="login.html">Login Simple</a></li>
+                                                            <li><a href="login-image.html">Login with Bg Image</a></li>
+                                                            <li><a href="login-video.html">Login with Bg video</a></li>
+                                                            <li><a href="signup.html">Register Simple</a></li>
+                                                            <li><a href="signup-image.html">Register with Bg Image</a></li>
+                                                            <li><a href="signup-video.html">Register with Bg video</a></li>
+                                                            <li><a href="unlock.html">Unlock User</a></li>
+                                                            <li><a href="forget-password.html">Forget Password</a></li>
+                                                            <li><a href="reset-password.html">Reset Password</a></li>
+                                                            <li><a href="maintenance.html">Maintenance</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col mega-box">
+                                                    <div class="link-section">
+                                                        <div class="submenu-title">
+                                                            <h5>Coming Soon</h5>
+                                                        </div>
+                                                        <ul class="submenu-content opensubmegamenu">
+                                                            <li><a href="comingsoon.html">Coming Simple</a></li>
+                                                            <li><a href="comingsoon-bg-video.html">Coming with Bg video</a></li>
+                                                            <li><a href="comingsoon-bg-img.html">Coming with Bg Image</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col mega-box">
+                                                    <div class="link-section">
+                                                        <div class="submenu-title">
+                                                            <h5>Email templates</h5>
+                                                        </div>
+                                                        <ul class="submenu-content opensubmegamenu">
+                                                            <li><a href="basic-template.html">Basic Email</a></li>
+                                                            <li><a href="email-header.html">Basic With Header</a></li>
+                                                            <li><a href="template-email.html">Ecomerce Template</a></li>
+                                                            <li><a href="template-email-2.html">Email Template 2</a></li>
+                                                            <li><a href="ecommerce-templates.html">Ecommerce Email</a></li>
+                                                            <li><a href="email-order-success.html">Order Success</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="right-arrow" id="right-arrow"><i data-feather="arrow-right"></i></div>
+                    </div>
+                </nav>
+            </header>
+            <!-- Page Sidebar Ends-->
+            <div class="page-body">
+                <div class="container-fluid">
+                    <div class="page-header">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="index.html"><i class="f-16 fa fa-home"></i></a></li>
+                                    <li class="breadcrumb-item">Dashboard</li>
+                                </ol>
+                                <h3>
+                                    Business Dashboard
+                                </h3>
+                            </div>
+                            <div class="col-lg-6">
+                                <!-- Bookmark Start-->
+                                <div class="bookmark pull-right">
+                                    <ul>
+                                        <li><a href="#" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" title="" data-original-title="Tables"><i data-feather="inbox"></i></a></li>
+                                        <li><a href="#" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" title="" data-original-title="Chat"><i data-feather="message-square"></i></a></li>
+                                        <li><a href="#" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" title="" data-original-title="Icons"><i data-feather="command"></i></a></li>
+                                        <li><a href="#" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" title="" data-original-title="Learning"><i data-feather="layers"></i></a></li>
+                                        <li>
+                                            <a href="#"><i class="bookmark-search" data-feather="star"></i></a>
+                                            <form class="form-inline search-form">
+                                                <div class="mb-3 form-control-search form-group">
+                                                    <input type="text" placeholder="Search..">
+                                                </div>
+                                            </form>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- Bookmark Ends-->
+                            </div>
+                        </div>
+                    </div>
+                    @RenderBody()
+                </div>
+                <!-- Container-fluid starts-->
+
+                <div class="row">
+                    <div class="col-lg-12 box-col-12">
+                        <div class="row total-sale-col">
+                            <div class="col-xxl-5 box-col-12">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="card card-with-border welcome-card o-hidden">
+                                            <img class="main" src="theme/assets/images/dashboard/welcome.png" alt=""><img class="decore1" src="theme/assets/images/dashboard/d1.png" alt=""><img class="decore3" src="theme/assets/images/dashboard/d1.png" alt=""><img class="decore4" src="theme/assets/images/dashboard/d1.png" alt=""><img class="decore2" src="theme/assets/images/dashboard/d2.png" alt="">
+                                            <div class="card-header card-no-border o-hidden total-sale-widget">
+                                                <div class="d-flex">
+                                                    <div class="flex-grow-1">
+                                                        <h5 class="f-w-600">Hello Johan Deo !</h5>
+                                                        <p>  Welcome back to xolo dashboard</p>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex mt-5">
+                                                    <div class="flex-grow-1">
+                                                        <h3>Wednesday, 20</h3>
+                                                        <p class="mb-0">Today's Sale<span class="font-success">3.56%<i class="fa fa-caret-up"></i></span></p>
+                                                        <div class="sales-widgets d-flex mt-1">
+                                                            <h3 class="mt-1 mb-0 f-w-600"><i class="me-1 txt-primary" data-feather="dollar-sign"></i><span class="counter txt-primary">405,</span><span class="ms-2 f-12 f-w-400">Earrning</span></h3>
+                                                        </div>
+                                                        <p class="mb-0">your sales & earning over the last 24 hours</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <div class="card card-with-border o-hidden total-sale-widget">
+                                            <div class="d-flex align-items-center">
+                                                <div class="media-left">
+                                                    <div class="card-no-border p-20">
+                                                        <div class="d-flex">
+                                                            <div class="flex-grow-1">
+                                                                <p class="mb-0">Total Sale<span class="font-warning">3.56%<i class="fa fa-caret-up"></i></span></p>
+                                                                <div class="sales-widgets d-flex">
+                                                                    <h3 class="mt-1 mb-0 f-w-600"><i class="me-1" data-feather="dollar-sign"></i><span class="counter">12,461</span></h3>
+                                                                    <p class="mb-0">Last Year</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="media-right">
+                                                    <div class="card-body p-0">
+                                                        <div class="apex-chart-container">
+                                                            <div id="timeline-chart1"> </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card card-with-border o-hidden total-sale-widget">
+                                            <div class="d-flex align-items-center">
+                                                <div class="media-left">
+                                                    <div class="card-no-border p-20">
+                                                        <div class="d-flex">
+                                                            <div class="flex-grow-1">
+                                                                <p class="mb-0">Active Customer<span class="font-success">01.56<i class="fa fa-caret-up"></i></span></p>
+                                                                <div class="sales-widgets d-flex">
+                                                                    <h3 class="mt-1 mb-0 f-w-600"><span class="counter">10,14,12</span></h3>
+                                                                    <p class="mb-0">Last Day</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="media-right">
+                                                    <div class="card-body p-0">
+                                                        <div class="apex-chart-container">
+                                                            <div id="timeline-chart2"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-7 box-col-12">
+                                <div class="card card-with-border monthly-growth o-hidden">
+                                    <div class="card-header card-no-border">
+                                        <h5>Monthly Revenue Growth</h5><span>Number of This Monthly Revenue Growth</span>
+                                        <div class="card-header-right">
+                                            <ul class="list-unstyled card-option">
+                                                <li><i class="icofont icofont-double-left"></i></li>
+                                                <li><i class="view-html fa fa-code"></i></li>
+                                                <li><i class="icofont icofont-maximize full-card"></i></li>
+                                                <li><i class="icofont icofont-minus minimize-card"></i></li>
+                                                <li><i class="icofont icofont-refresh reload-card"></i></li>
+                                                <li><i class="icofont icofont-error close-card"></i></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card-body pt-0 px-0">
+                                        <div class="chart-value-box pull-right chart-data-set">
+                                            <div class="value-square-box-primary"></div><span>Purchase</span>
+                                            <div class="value-square-box-light ms-3"></div><span>Sale</span>
+                                        </div>
+                                        <div class="dashboard-rounded-chart flot-chart-container"></div>
+                                        <div class="code-box-copy">
+                                            <button class="code-box-copy__btn btn-clipboard" data-clipboard-target="#example-head" title="Copy"><i class="icofont icofont-copy-alt"></i></button>
+                                            <pre><code class="language-html" id="example-head">&lt;!-- Cod Box Copy begin --&gt;
+&lt;div class="card-body pt-0 px-0"&gt;
+  &lt;div class="chart-value-box pull-right chart-data-set"&gt;
+    &lt;div class="value-square-box-primary"&gt;&lt;/div&gt;&lt;span&gt;Sale&lt;/span&gt;
+    &lt;div class="value-square-box-light ml-3"&gt;&lt;/div&gt;&lt;span&gt;Total&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class="dashboard-rounded-chart flot-chart-container"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="card-footer p-0"&gt;
+  &lt;div class="row growth-revenue-footer"&gt;
+    &lt;div class="col-6"&gt;
+      &lt;div class="card ecommerce-widget mb-0"&gt;
+        &lt;div class="card-body support-ticket-font"&gt;
+          &lt;div class="d-flex"&gt;
+            &lt;div class="data-left-ticket"&gt;&lt;span class="f-12"&gt;New User&lt;/span&gt;
+              &lt;h3 class="total-num"&gt;&lt;span class="mr-1"&gt;$&lt;/span&gt;&lt;span class="counter"&gt; 8,162&lt;/span&gt;&lt;/h3&gt;
+            &lt;/div&gt;
+            &lt;div class="data-right-ticket"&gt;
+              &lt;div class="text-md-right"&gt;
+                &lt;ul&gt;
+                  &lt;li&gt;&lt;span class="f-12"&gt;85% goal reached&lt;/span&gt;&lt;/li&gt;
+                  &lt;li&gt;
+                    &lt;h6 class="f-18 mb-0"&gt;1,00,000&lt;/h6&gt;
+                  &lt;/li&gt;
+                &lt;/ul&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="progress-showcase"&gt;
+            &lt;div class="progress sm-progress-bar"&gt;
+              &lt;div class="progress-bar bg-primary" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="col-6"&gt;
+      &lt;div class="card ecommerce-widget mb-0"&gt;
+        &lt;div class="card-body support-ticket-font"&gt;
+          &lt;div class="d-flex"&gt;
+            &lt;div class="data-left-ticket"&gt;&lt;span class="f-12"&gt;Total Income&lt;/span&gt;
+              &lt;h3 class="total-num"&gt;&lt;span class="mr-1"&gt;$&lt;/span&gt;&lt;span class="counter"&gt; 4,685&lt;/span&gt;&lt;/h3&gt;
+            &lt;/div&gt;
+            &lt;div class="data-right-ticket"&gt;
+              &lt;div class="text-md-right"&gt;
+                &lt;ul&gt;
+                  &lt;li&gt;&lt;span class="f-12"&gt;45% goal reached&lt;/span&gt;&lt;/li&gt;
+                  &lt;li&gt;
+                    &lt;h6 class="f-18 mb-0"&gt;1,00,000&lt;/h6&gt;
+                  &lt;/li&gt;
+                &lt;/ul&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="progress-showcase"&gt;
+            &lt;div class="progress sm-progress-bar"&gt;
+              &lt;div class="progress-bar bg-success" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="col-6"&gt;
+      &lt;div class="card ecommerce-widget mb-0"&gt;
+        &lt;div class="card-body support-ticket-font"&gt;
+          &lt;div class="d-flex"&gt;
+            &lt;div class="data-left-ticket"&gt;&lt;span class="f-12"&gt;Active User&lt;/span&gt;
+              &lt;h3 class="total-num"&gt;&lt;span class="mr-1"&gt;$&lt;/span&gt;&lt;span class="counter"&gt; 3,513&lt;/span&gt;&lt;/h3&gt;
+            &lt;/div&gt;
+            &lt;div class="data-right-ticket"&gt;
+              &lt;div class="text-md-right"&gt;
+                &lt;ul&gt;
+                  &lt;li&gt;&lt;span class="f-12"&gt;70% goal reached&lt;/span&gt;&lt;/li&gt;
+                  &lt;li&gt;
+                    &lt;h6 class="f-18 mb-0"&gt;1,00,000&lt;/h6&gt;
+                  &lt;/li&gt;
+                &lt;/ul&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="progress-showcase"&gt;
+            &lt;div class="progress sm-progress-bar"&gt;
+              &lt;div class="progress-bar bg-danger" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="col-6"&gt;
+      &lt;div class="card ecommerce-widget mb-0"&gt;
+        &lt;div class="card-body support-ticket-font"&gt;
+          &lt;div class="d-flex"&gt;
+            &lt;div class="data-left-ticket"&gt;&lt;span class="f-12"&gt;Total Tax&lt;/span&gt;
+              &lt;h3 class="total-num"&gt;&lt;span class="mr-1"&gt;$&lt;/span&gt;&lt;span class="counter"&gt; 2,749&lt;/span&gt;&lt;/h3&gt;
+            &lt;/div&gt;
+            &lt;div class="data-right-ticket"&gt;
+              &lt;div class="text-md-right"&gt;
+                &lt;ul&gt;
+                  &lt;li&gt;&lt;span class="f-12"&gt;52% goal reached&lt;/span&gt;&lt;/li&gt;
+                  &lt;li&gt;
+                    &lt;h6 class="f-18 mb-0"&gt;1,00,000&lt;/h6&gt;
+                  &lt;/li&gt;
+                &lt;/ul&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="progress-showcase"&gt;
+            &lt;div class="progress sm-progress-bar"&gt;
+              &lt;div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+ &lt;/div&gt;
+ &lt;!-- Cod Box Copy end --&gt;</code></pre>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer p-0">
+                                        <div class="row growth-revenue-footer">
+                                            <div class="col-6">
+                                                <div class="card ecommerce-widget mb-0">
+                                                    <div class="card-body support-ticket-font">
+                                                        <div class="d-flex">
+                                                            <div class="data-left-ticket">
+                                                                <span class="f-12">Total sales</span>
+                                                                <h5 class="total-num"><span class="me-1">$</span><span class="counter"> 8,162</span></h5>
+                                                            </div>
+                                                            <div class="data-right-ticket">
+                                                                <div class="text-md-end">
+                                                                    <ul>
+                                                                        <li><span class="f-12">85% goal reached</span></li>
+                                                                        <li>
+                                                                            <h6 class="mb-0">1,00,000</h6>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="progress-showcase">
+                                                            <div class="progress sm-progress-bar">
+                                                                <div class="progress-bar bg-primary" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="card ecommerce-widget mb-0">
+                                                    <div class="card-body support-ticket-font">
+                                                        <div class="d-flex">
+                                                            <div class="data-left-ticket">
+                                                                <span class="f-12">Total Income</span>
+                                                                <h5 class="total-num"><span class="me-1">$</span><span class="counter"> 4,685</span></h5>
+                                                            </div>
+                                                            <div class="data-right-ticket">
+                                                                <div class="text-md-end">
+                                                                    <ul>
+                                                                        <li><span class="f-12">45% goal reached</span></li>
+                                                                        <li>
+                                                                            <h6 class="mb-0">1,00,000</h6>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="progress-showcase">
+                                                            <div class="progress sm-progress-bar">
+                                                                <div class="progress-bar bg-success" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="card ecommerce-widget mb-0">
+                                                    <div class="card-body support-ticket-font pt-0">
+                                                        <div class="d-flex">
+                                                            <div class="data-left-ticket">
+                                                                <span class="f-12">Active User</span>
+                                                                <h5 class="total-num"><span class="me-1">$</span><span class="counter"> 3,513</span></h5>
+                                                            </div>
+                                                            <div class="data-right-ticket">
+                                                                <div class="text-md-end">
+                                                                    <ul>
+                                                                        <li><span class="f-12">70% goal reached</span></li>
+                                                                        <li>
+                                                                            <h6 class="mb-0">1,00,000</h6>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="progress-showcase">
+                                                            <div class="progress sm-progress-bar">
+                                                                <div class="progress-bar bg-primary-light" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="card ecommerce-widget mb-0">
+                                                    <div class="card-body support-ticket-font pt-0">
+                                                        <div class="d-flex">
+                                                            <div class="data-left-ticket">
+                                                                <span class="f-12">Total Tax</span>
+                                                                <h5 class="total-num"><span class="me-1">$</span><span class="counter"> 2,749</span></h5>
+                                                            </div>
+                                                            <div class="data-right-ticket">
+                                                                <div class="text-md-end">
+                                                                    <ul>
+                                                                        <li><span class="f-12">52% goal reached</span></li>
+                                                                        <li>
+                                                                            <h6 class="mb-0">1,00,000</h6>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="progress-showcase">
+                                                            <div class="progress sm-progress-bar">
+                                                                <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-6 box-col-12">
+                        <div class="card card-with-border total-users-lists">
+                            <div class="card-header card-no-border">
+                                <h5>Total New Venders</h5><span>Number of Totally Users</span>
+                                <div class="card-header-right">
+                                    <ul class="list-unstyled card-option">
+                                        <li><i class="icofont icofont-double-left"></i></li>
+                                        <li><i class="view-html fa fa-code"></i></li>
+                                        <li><i class="icofont icofont-maximize full-card"></i></li>
+                                        <li><i class="icofont icofont-minus minimize-card"></i></li>
+                                        <li><i class="icofont icofont-refresh reload-card"></i></li>
+                                        <li><i class="icofont icofont-error close-card"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-body p-0">
+                                <div class="users-total table-responsive">
+                                    <table class="table table-bordernone">
+                                        <thead>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Country</th>
+                                                <th>Date</th>
+                                                <th>Payment</th>
+                                                <th>Total</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center align-middle">
+                                                        <img class="img-40 align-top m-r-15 b-r-10" src="theme/assets/images/user/2.png" alt="">
+                                                        <div class="d-inline-block"><span>Nick Stone</span></div>
+                                                    </div>
+                                                </td>
+                                                <td><i class="flag-icon flag-icon-gb"></i></td>
+                                                <td><span class="f-12">10 May 2018</span></td>
+                                                <td><i>COD</i></td>
+                                                <td><span>8652.00 $</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center align-middle">
+                                                        <img class="img-40 align-top m-r-15 b-r-10" src="theme/assets/images/user/5.jpg" alt="">
+                                                        <div class="d-inline-block"><span>Milano Esco</span></div>
+                                                    </div>
+                                                </td>
+                                                <td><i class="flag-icon flag-icon-lr"></i></td>
+                                                <td><span class="f-12">10 May 2018</span></td>
+                                                <td><i>COD</i></td>
+                                                <td><span>102.00 $</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center align-middle">
+                                                        <img class="img-40 align-top m-r-15 b-r-10" src="theme/assets/images/user/3.jpg" alt="">
+                                                        <div class="d-inline-block"><span>Wiltor Noice</span></div>
+                                                    </div>
+                                                </td>
+                                                <td><i class="flag-icon flag-icon-za"></i></td>
+                                                <td><span class="f-12">10 May 2018</span></td>
+                                                <td><i>Cash</i></td>
+                                                <td><span>2315.00 $</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center align-middle">
+                                                        <img class="img-40 align-top m-r-15 b-r-10" src="theme/assets/images/user/4.jpg" alt="">
+                                                        <div class="d-inline-block"><span>Anna Strong</span></div>
+                                                    </div>
+                                                </td>
+                                                <td><i class="flag-icon flag-icon-at"></i></td>
+                                                <td><span class="f-12">10 May 2018</span></td>
+                                                <td><i>Bank</i></td>
+                                                <td><span>4513.00 $</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center align-middle">
+                                                        <img class="img-40 align-top m-r-15 b-r-10" src="theme/assets/images/user/12.png" alt="">
+                                                        <div class="d-inline-block"><span>Anna Strong</span></div>
+                                                    </div>
+                                                </td>
+                                                <td><i class="flag-icon flag-icon-lr"></i></td>
+                                                <td><span class="f-12">10 May 2018</span></td>
+                                                <td><i>Cheque</i></td>
+                                                <td><span>4513.00 $</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center align-middle">
+                                                        <img class="img-40 align-top m-r-15 b-r-10" src="theme/assets/images/user/5.jpg" alt="">
+                                                        <div class="d-inline-block"><span>Anna Strong</span></div>
+                                                    </div>
+                                                </td>
+                                                <td><i class="flag-icon flag-icon-gb"></i></td>
+                                                <td><span class="f-12">10 May 2018</span></td>
+                                                <td><i>Cheque</i></td>
+                                                <td><span>4513.00 $</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center align-middle">
+                                                        <img class="img-40 align-top m-r-15 b-r-10" src="theme/assets/images/user/10.jpg" alt="">
+                                                        <div class="d-inline-block"><span>Anna Strong</span></div>
+                                                    </div>
+                                                </td>
+                                                <td><i class="flag-icon flag-icon-za"></i></td>
+                                                <td><span class="f-12">10 May 2018</span></td>
+                                                <td><i>Cash</i></td>
+                                                <td><span>4513.00 $</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="code-box-copy">
+                                    <button class="code-box-copy__btn btn-clipboard" data-clipboard-target="#table-card1" title="Copy"><i class="icofont icofont-copy-alt"></i></button>
+                                    <pre><code class="language-html" id="table-card1">&lt;!-- Cod Box Copy begin --&gt;
+&lt;div class="card-body p-0"&gt;
+  &lt;div class="users-total table-responsive"&gt;
+    &lt;table class="table table-bordernone"&gt;
+      &lt;thead&gt;
+        &lt;tr&gt;
+          &lt;th&gt;Name&lt;/th&gt;
+          &lt;th&gt;Country&lt;/th&gt;
+          &lt;th&gt;Date&lt;/th&gt;
+          &lt;th&gt;Payment&lt;/th&gt;
+          &lt;th&gt;Total&lt;/th&gt;
+        &lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;
+            &lt;div class="d-inline-block align-middle"&gt;&lt;img class="img-radius img-40 align-top m-r-15 rounded-circle" src="theme/assets/images/user/2.png" alt=""&gt;
+              &lt;div class="d-inline-block"&gt;&lt;span&gt;Nick Stone&lt;/span&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/td&gt;
+          &lt;td&gt;&lt;i class="flag-icon flag-icon-gb"&gt;&lt;/i&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;span class="f-12"&gt;10 May 2018&lt;/span&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;img src="theme/assets/images/dashboard/payment-1.png" alt=""&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;span&gt;8652.00 $&lt;/span&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;
+            &lt;div class="d-inline-block align-middle"&gt;&lt;img class="img-radius img-40 align-top m-r-15 rounded-circle" src="theme/assets/images/user/5.jpg" alt=""&gt;
+              &lt;div class="d-inline-block"&gt;&lt;span&gt;Milano Esco&lt;/span&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/td&gt;
+          &lt;td&gt;&lt;i class="flag-icon flag-icon-lr"&gt;&lt;/i&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;span class="f-12"&gt;10 May 2018&lt;/span&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;img src="theme/assets/images/dashboard/payment-2.png" alt=""&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;span&gt;102.00 $&lt;/span&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;
+            &lt;div class="d-inline-block align-middle"&gt;&lt;img class="img-radius img-40 align-top m-r-15 rounded-circle" src="theme/assets/images/user/3.jpg" alt=""&gt;
+              &lt;div class="d-inline-block"&gt;&lt;span&gt;Wiltor Noice&lt;/span&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/td&gt;
+          &lt;td&gt;&lt;i class="flag-icon flag-icon-za"&gt;&lt;/i&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;span class="f-12"&gt;10 May 2018&lt;/span&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;img src="theme/assets/images/dashboard/payment-3.png" alt=""&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;span&gt;2315.00 $&lt;/span&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;
+            &lt;div class="d-inline-block align-middle"&gt;&lt;img class="img-radius img-40 align-top m-r-15 rounded-circle" src="theme/assets/images/user/4.jpg" alt=""&gt;
+              &lt;div class="d-inline-block"&gt;&lt;span&gt;Anna Strong&lt;/span&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/td&gt;
+          &lt;td&gt;&lt;i class="flag-icon flag-icon-at"&gt;&lt;/i&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;span class="f-12"&gt;10 May 2018&lt;/span&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;img src="theme/assets/images/dashboard/payment-4.png" alt=""&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;span&gt;4513.00 $&lt;/span&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;
+            &lt;div class="d-inline-block align-middle"&gt;&lt;img class="img-radius img-40 align-top m-r-15 rounded-circle" src="theme/assets/images/user/12.png" alt=""&gt;
+              &lt;div class="d-inline-block"&gt;&lt;span&gt;Anna Strong&lt;/span&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/td&gt;
+          &lt;td&gt;&lt;i class="flag-icon flag-icon-lr"&gt;&lt;/i&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;span class="f-12"&gt;10 May 2018&lt;/span&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;img src="theme/assets/images/dashboard/payment-4.png" alt=""&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;span&gt;4513.00 $&lt;/span&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;
+            &lt;div class="d-inline-block align-middle"&gt;&lt;img class="img-radius img-40 align-top m-r-15 rounded-circle" src="theme/assets/images/user/5.jpg" alt=""&gt;
+              &lt;div class="d-inline-block"&gt;&lt;span&gt;Anna Strong&lt;/span&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/td&gt;
+          &lt;td&gt;&lt;i class="flag-icon flag-icon-gb"&gt;&lt;/i&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;span class="f-12"&gt;10 May 2018&lt;/span&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;img src="theme/assets/images/dashboard/payment-4.png" alt=""&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;span&gt;4513.00 $&lt;/span&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;
+            &lt;div class="d-inline-block align-middle"&gt;&lt;img class="img-radius img-40 align-top m-r-15 rounded-circle" src="theme/assets/images/user/10.jpg" alt=""&gt;
+              &lt;div class="d-inline-block"&gt;&lt;span&gt;Anna Strong&lt;/span&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/td&gt;
+          &lt;td&gt;&lt;i class="flag-icon flag-icon-za"&gt;&lt;/i&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;span class="f-12"&gt;10 May 2018&lt;/span&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;img src="theme/assets/images/dashboard/payment-4.png" alt=""&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;span&gt;4513.00 $&lt;/span&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- Cod Box Copy end --&gt;</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-6 box-col-12">
+                        <div class="card card-with-border total-users-lists">
+                            <div class="card-header card-no-border">
+                                <h5>Today Transaction Details</h5><span>Today's transaction</span>
+                                <div class="card-header-right">
+                                    <ul class="list-unstyled card-option">
+                                        <li><i class="icofont icofont-double-left"></i></li>
+                                        <li><i class="view-html fa fa-code"></i></li>
+                                        <li><i class="icofont icofont-maximize full-card"></i></li>
+                                        <li><i class="icofont icofont-minus minimize-card"></i></li>
+                                        <li><i class="icofont icofont-refresh reload-card"></i></li>
+                                        <li><i class="icofont icofont-error close-card"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-body p-0">
+                                <div class="users-total table-responsive">
+                                    <table class="table table-bordernone">
+                                        <thead>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Invoice No.</th>
+                                                <th>Date</th>
+                                                <th>Status</th>
+                                                <th>Total</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-item-center align-middle">
+                                                        <img class="img-40 align-top m-r-15 b-r-10" src="theme/assets/images/user/9.jpg" alt="">
+                                                        <div class="d-inline-block"><span>Karen Leah</span></div>
+                                                    </div>
+                                                </td>
+                                                <td>#PX0101</td>
+                                                <td><span class="f-12">9:01</span></td>
+                                                <td><span class="txt-success">Complete &#x2764;</span></td>
+                                                <td><span>8652.00 $</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-item-center align-middle">
+                                                        <img class="img-40 align-top m-r-15 b-r-10" src="theme/assets/images/user/10.jpg" alt="">
+                                                        <div class="d-inline-block"><span>Mary Esco</span></div>
+                                                    </div>
+                                                </td>
+                                                <td>#PX0102</td>
+                                                <td><span class="f-12">9:10</span></td>
+                                                <td><span class="txt-warning">In progress &#8987;</span></td>
+                                                <td><span>102.00 $</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-item-center align-middle">
+                                                        <img class="img-40 align-top m-r-15 b-r-10" src="theme/assets/images/user/11.jpg" alt="">
+                                                        <div class="d-inline-block"><span>Wiltor Molly</span></div>
+                                                    </div>
+                                                </td>
+                                                <td>#PX0103</td>
+                                                <td><span class="f-12">9:42</span></td>
+                                                <td><span class="txt-danger">Due &#8986;</span></td>
+                                                <td><span>2315.00 $</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-item-center align-middle">
+                                                        <img class="img-40 align-top m-r-15 b-r-10" src="theme/assets/images/user/12.png" alt="">
+                                                        <div class="d-inline-block"><span>Anna Colin</span></div>
+                                                    </div>
+                                                </td>
+                                                <td>#PX0104</td>
+                                                <td><span class="f-12">10:01</span></td>
+                                                <td><span class="txt-danger">Due &#8986;</span></td>
+                                                <td><span>4513.00 $</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-item-center align-middle">
+                                                        <img class="img-40 align-top m-r-15 b-r-10" src="theme/assets/images/user/14.png" alt="">
+                                                        <div class="d-inline-block"><span>Josep Jus</span></div>
+                                                    </div>
+                                                </td>
+                                                <td>#PX0105</td>
+                                                <td><span class="f-12">10:01</span></td>
+                                                <td><span class="txt-success">complete &#x2764;</span></td>
+                                                <td><span>4513.00 $</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-item-center align-middle">
+                                                        <img class="img-40 align-top m-r-15 b-r-10" src="theme/assets/images/user/2.jpg" alt="">
+                                                        <div class="d-inline-block"><span>Paul Owen</span></div>
+                                                    </div>
+                                                </td>
+                                                <td>#PX0106</td>
+                                                <td><span class="f-12">10:50</span></td>
+                                                <td><span class="txt-warning">In progress &#8987;</span></td>
+                                                <td><span>4513.00 $</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-item-center align-middle">
+                                                        <img class="img-40 align-top m-r-15 b-r-10" src="theme/assets/images/user/10.jpg" alt="">
+                                                        <div class="d-inline-block"><span>Burgess Carr</span></div>
+                                                    </div>
+                                                </td>
+                                                <td>#PX0107</td>
+                                                <td><span class="f-12">10:59</span></td>
+                                                <td><span class="txt-success">complete &#x2764;</span></td>
+                                                <td><span>4513.00 $</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="code-box-copy">
+                                    <button class="code-box-copy__btn btn-clipboard" data-clipboard-target="#example-head1" title="Copy"><i class="icofont icofont-copy-alt"></i></button>
+                                    <pre><code class="language-html" id="example-head1">&lt;!-- Cod Box Copy begin --&gt;
+&lt;div class="card-body p-0"&gt;
+  &lt;div class="users-total table-responsive"&gt;
+    &lt;table class="table table-bordernone"&gt;
+      &lt;thead&gt;
+        &lt;tr&gt;
+          &lt;th&gt;Name&lt;/th&gt;
+          &lt;th&gt;Country&lt;/th&gt;
+          &lt;th&gt;Date&lt;/th&gt;
+          &lt;th&gt;Payment&lt;/th&gt;
+          &lt;th&gt;Total&lt;/th&gt;
+        &lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;
+            &lt;div class="d-inline-block align-middle"&gt;&lt;img class="img-radius img-40 align-top m-r-15 rounded-circle" src="theme/assets/images/user/2.png" alt=""&gt;
+              &lt;div class="d-inline-block"&gt;&lt;span&gt;Nick Stone&lt;/span&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/td&gt;
+          &lt;td&gt;&lt;i class="flag-icon flag-icon-gb"&gt;&lt;/i&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;span class="f-12"&gt;10 May 2018&lt;/span&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;img src="theme/assets/images/dashboard/payment-1.png" alt=""&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;span&gt;8652.00 $&lt;/span&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;
+            &lt;div class="d-inline-block align-middle"&gt;&lt;img class="img-radius img-40 align-top m-r-15 rounded-circle" src="theme/assets/images/user/5.jpg" alt=""&gt;
+              &lt;div class="d-inline-block"&gt;&lt;span&gt;Milano Esco&lt;/span&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/td&gt;
+          &lt;td&gt;&lt;i class="flag-icon flag-icon-lr"&gt;&lt;/i&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;span class="f-12"&gt;10 May 2018&lt;/span&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;img src="theme/assets/images/dashboard/payment-2.png" alt=""&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;span&gt;102.00 $&lt;/span&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;
+            &lt;div class="d-inline-block align-middle"&gt;&lt;img class="img-radius img-40 align-top m-r-15 rounded-circle" src="theme/assets/images/user/3.jpg" alt=""&gt;
+              &lt;div class="d-inline-block"&gt;&lt;span&gt;Wiltor Noice&lt;/span&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/td&gt;
+          &lt;td&gt;&lt;i class="flag-icon flag-icon-za"&gt;&lt;/i&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;span class="f-12"&gt;10 May 2018&lt;/span&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;img src="theme/assets/images/dashboard/payment-3.png" alt=""&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;span&gt;2315.00 $&lt;/span&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;
+            &lt;div class="d-inline-block align-middle"&gt;&lt;img class="img-radius img-40 align-top m-r-15 rounded-circle" src="theme/assets/images/user/4.jpg" alt=""&gt;
+              &lt;div class="d-inline-block"&gt;&lt;span&gt;Anna Strong&lt;/span&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/td&gt;
+          &lt;td&gt;&lt;i class="flag-icon flag-icon-at"&gt;&lt;/i&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;span class="f-12"&gt;10 May 2018&lt;/span&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;img src="theme/assets/images/dashboard/payment-4.png" alt=""&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;span&gt;4513.00 $&lt;/span&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;
+            &lt;div class="d-inline-block align-middle"&gt;&lt;img class="img-radius img-40 align-top m-r-15 rounded-circle" src="theme/assets/images/user/12.png" alt=""&gt;
+              &lt;div class="d-inline-block"&gt;&lt;span&gt;Anna Strong&lt;/span&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/td&gt;
+          &lt;td&gt;&lt;i class="flag-icon flag-icon-lr"&gt;&lt;/i&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;span class="f-12"&gt;10 May 2018&lt;/span&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;img src="theme/assets/images/dashboard/payment-4.png" alt=""&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;span&gt;4513.00 $&lt;/span&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;
+            &lt;div class="d-inline-block align-middle"&gt;&lt;img class="img-radius img-40 align-top m-r-15 rounded-circle" src="theme/assets/images/user/5.jpg" alt=""&gt;
+              &lt;div class="d-inline-block"&gt;&lt;span&gt;Anna Strong&lt;/span&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/td&gt;
+          &lt;td&gt;&lt;i class="flag-icon flag-icon-gb"&gt;&lt;/i&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;span class="f-12"&gt;10 May 2018&lt;/span&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;img src="theme/assets/images/dashboard/payment-4.png" alt=""&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;span&gt;4513.00 $&lt;/span&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;
+            &lt;div class="d-inline-block align-middle"&gt;&lt;img class="img-radius img-40 align-top m-r-15 rounded-circle" src="theme/assets/images/user/10.jpg" alt=""&gt;
+              &lt;div class="d-inline-block"&gt;&lt;span&gt;Anna Strong&lt;/span&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/td&gt;
+          &lt;td&gt;&lt;i class="flag-icon flag-icon-za"&gt;&lt;/i&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;span class="f-12"&gt;10 May 2018&lt;/span&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;img src="theme/assets/images/dashboard/payment-4.png" alt=""&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;span&gt;4513.00 $&lt;/span&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- Cod Box Copy end --&gt;</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-5 box-col-12">
+                        <div class="card investments card-with-border">
+                            <div class="card-header card-no-border">
+                                <h5>Total Investment</h5><span>Number of  Revenue Growth</span>
+                                <div class="card-header-right">
+                                    <ul class="list-unstyled card-option">
+                                        <li><i class="icofont icofont-double-left"></i></li>
+                                        <li><i class="view-html fa fa-code"></i></li>
+                                        <li><i class="icofont icofont-maximize full-card"></i></li>
+                                        <li><i class="icofont icofont-minus minimize-card"></i></li>
+                                        <li><i class="icofont icofont-refresh reload-card"></i></li>
+                                        <li><i class="icofont icofont-error close-card"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-body p-0">
+                                <div id="circlechart"></div>
+                                <div class="code-box-copy">
+                                    <button class="code-box-copy__btn btn-clipboard" data-clipboard-target="#example-head2" title="Copy"><i class="icofont icofont-copy-alt"></i></button>
+                                    <pre><code class="language-html" id="example-head2">&lt;!-- Cod Box Copy begin --&gt;
+&lt;div class="card-body p-0"&gt;
+  &lt;div id="circlechart"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="card-footer p-0"&gt;
+  &lt;ul&gt;
+    &lt;li class="text-center"&gt;&lt;span class="f-12"&gt;Total&lt;/span&gt;
+      &lt;h6 class="f-w-600 mb-0"&gt;$34,4562&lt;/h6&gt;
+    &lt;/li&gt;
+    &lt;li class="text-center"&gt;&lt;span class="f-12"&gt;Monthly&lt;/span&gt;
+      &lt;h6 class="f-w-600 mb-0"&gt;$12,463&lt;/h6&gt;
+    &lt;/li&gt;
+    &lt;li class="text-center"&gt;&lt;span class="f-12"&gt;Daily&lt;/span&gt;
+      &lt;h6 class="f-w-600 mb-0"&gt;$5000&lt;/h6&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+&lt;!-- Cod Box Copy end --&gt;</code></pre>
+                                </div>
+                            </div>
+                            <div class="card-footer p-0">
+                                <ul>
+                                    <li class="text-center">
+                                        <span class="f-12">Total</span>
+                                        <h6 class="f-w-600 mb-0">$34,4562</h6>
+                                    </li>
+                                    <li class="text-center">
+                                        <span class="f-12">Monthly</span>
+                                        <h6 class="f-w-600 mb-0">$12,463</h6>
+                                    </li>
+                                    <li class="text-center">
+                                        <span class="f-12">Daily</span>
+                                        <h6 class="f-w-600 mb-0">$5000</h6>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-7 box-col-12">
+                        <div class="card card-with-border total-users-lists">
+                            <div class="card-header card-no-border">
+                                <h5>Product Details</h5><span>Details of our best sale product</span>
+                                <div class="dashboard-btn-groups">
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button class="btn btn-outline-light btn-js1" type="button">Day</button>
+                                        <button class="btn btn-outline-light btn-js1" type="button">Week</button>
+                                        <button class="btn btn-outline-light btn-js1 active" type="button">Month</button>
+                                    </div>
+                                </div>
+                                <div class="card-header-right">
+                                    <ul class="list-unstyled card-option">
+                                        <li><i class="icofont icofont-double-left"></i></li>
+                                        <li><i class="view-html fa fa-code"></i></li>
+                                        <li><i class="icofont icofont-maximize full-card"></i></li>
+                                        <li><i class="icofont icofont-minus minimize-card"></i></li>
+                                        <li><i class="icofont icofont-refresh reload-card"></i></li>
+                                        <li><i class="icofont icofont-error close-card"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-body p-0">
+                                <div class="users-total table-responsive product-sales">
+                                    <table class="table table-bordernone">
+                                        <thead>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Sale</th>
+                                                <th>Shipping</th>
+                                                <th>MRP</th>
+                                                <th>Avaiablility</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex">
+                                                        <div class="round-product m-r-15"><i class="icofont icofont-jersey"></i></div><span>Solid Men Turtle Neck Black</span>
+                                                    </div>
+                                                </td>
+                                                <td><span class="f-12">11</span></td>
+                                                <td>
+                                                    <div class="progress-showcase">
+                                                        <div class="progress sm-progress-bar">
+                                                            <div class="progress-bar bg-success" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>$  5.15</td>
+                                                <td class="txt-success">In Stock</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex">
+                                                        <div class="round-product round-product-dark m-r-15"><i class="icofont icofont-time"></i></div><span>Solid Wall clock</span>
+                                                    </div>
+                                                </td>
+                                                <td><span class="f-12">31</span></td>
+                                                <td>
+                                                    <div class="progress-showcase">
+                                                        <div class="progress sm-progress-bar">
+                                                            <div class="progress-bar bg-danger" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>$  56.55</td>
+                                                <td class="txt-success">In Stock</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex">
+                                                        <div class="round-product round-product-dark m-r-15"><i class="icofont icofont-helmet"></i></div><span>New Men Helmet</span>
+                                                    </div>
+                                                </td>
+                                                <td><span class="f-12">12</span></td>
+                                                <td>
+                                                    <div class="progress-showcase">
+                                                        <div class="progress sm-progress-bar">
+                                                            <div class="progress-bar bg-warning" role="progressbar" style="width: 50%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>$  0.564</td>
+                                                <td class="txt-success">In Stock</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex">
+                                                        <div class="round-product round-product-dark m-r-15"><i class="icofont icofont-tennis"></i></div><span>Solid Tennis ball</span>
+                                                    </div>
+                                                </td>
+                                                <td><span class="f-12">25</span></td>
+                                                <td>
+                                                    <div class="progress-showcase">
+                                                        <div class="progress sm-progress-bar">
+                                                            <div class="progress-bar bg-danger" role="progressbar" style="width: 10%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>$1.556</td>
+                                                <td class="txt-danger">Out Of Stock</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex">
+                                                        <div class="round-product round-product-dark m-r-15"><i class="icofont icofont-water-bottle"></i></div><span>Colorfull Water bottle</span>
+                                                    </div>
+                                                </td>
+                                                <td><span class="f-12">48</span></td>
+                                                <td>
+                                                    <div class="progress-showcase">
+                                                        <div class="progress sm-progress-bar">
+                                                            <div class="progress-bar bg-success" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>$  56.26</td>
+                                                <td class="txt-success">In Stock</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex">
+                                                        <div class="round-product round-product-dark m-r-15"><i class="icofont icofont-skydiving-goggles"></i></div><span>Solid Unisex skydiving goggles</span>
+                                                    </div>
+                                                </td>
+                                                <td><span class="f-12">34</span></td>
+                                                <td>
+                                                    <div class="progress-showcase">
+                                                        <div class="progress sm-progress-bar">
+                                                            <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>$  2.564</td>
+                                                <td class="txt-success">In Stock</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="code-box-copy">
+                                    <button class="code-box-copy__btn btn-clipboard" data-clipboard-target="#example-head3" title="Copy"><i class="icofont icofont-copy-alt"></i></button>
+                                    <pre><code class="language-html" id="example-head3">&lt;!-- Cod Box Copy begin --&gt;
+&lt;div class="card-body p-0"&gt;
+  &lt;div class="users-total table-responsive product-sales"&gt;
+    &lt;table class="table table-bordernone"&gt;
+      &lt;thead&gt;
+        &lt;tr&gt;
+          &lt;th&gt;Product&lt;/th&gt;
+          &lt;th&gt;Sold&lt;/th&gt;
+          &lt;th&gt;Record Point&lt;/th&gt;
+          &lt;th&gt;Stock&lt;/th&gt;
+          &lt;th&gt;Amount&lt;/th&gt;
+          &lt;th&gt;Stock Status&lt;/th&gt;
+        &lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;
+            &lt;div class="d-flex"&gt;
+              &lt;div class="round-product m-r-15"&gt;&lt;/div&gt;&lt;span&gt;Women Imported Wallet-E32N&lt;/span&gt;
+            &lt;/div&gt;
+          &lt;/td&gt;
+          &lt;td&gt;&lt;span class="f-12"&gt;18&lt;/span&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;span class="badge badge-light f-14"&gt;05&lt;/span&gt;&lt;/td&gt;
+          &lt;td&gt;123&lt;/td&gt;
+          &lt;td&gt;$ 5.15&lt;/td&gt;
+          &lt;td&gt;In Stock&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;
+            &lt;div class="d-flex"&gt;
+              &lt;div class="round-product round-product-dark m-r-15"&gt;&lt;/div&gt;&lt;span&gt;Men Shoeless Nike Shoes&lt;/span&gt;
+            &lt;/div&gt;
+          &lt;/td&gt;
+          &lt;td&gt;&lt;span class="f-12"&gt;8&lt;/span&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;span class="badge badge-light f-14"&gt;12&lt;/span&gt;&lt;/td&gt;
+          &lt;td&gt;415&lt;/td&gt;
+          &lt;td&gt;$ 56.55&lt;/td&gt;
+          &lt;td&gt;In Stock&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;
+            &lt;div class="d-flex"&gt;
+              &lt;div class="round-product round-product-dark m-r-15"&gt;&lt;/div&gt;&lt;span&gt;Women Red one piece Dress&lt;/span&gt;
+            &lt;/div&gt;
+          &lt;/td&gt;
+          &lt;td&gt;&lt;span class="f-12"&gt;23&lt;/span&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;span class="badge badge-light f-14"&gt;10&lt;/span&gt;&lt;/td&gt;
+          &lt;td&gt;360&lt;/td&gt;
+          &lt;td&gt;$ 0.564&lt;/td&gt;
+          &lt;td&gt;In Stock&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;
+            &lt;div class="d-flex"&gt;
+              &lt;div class="round-product round-product-dark m-r-15"&gt;&lt;/div&gt;&lt;span&gt;Electroics Items&lt;/span&gt;
+            &lt;/div&gt;
+          &lt;/td&gt;
+          &lt;td&gt;&lt;span class="f-12"&gt;52&lt;/span&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;span class="badge badge-light f-14"&gt;32&lt;/span&gt;&lt;/td&gt;
+          &lt;td&gt;481&lt;/td&gt;
+          &lt;td&gt;$ 1.556&lt;/td&gt;
+          &lt;td&gt;Out Of Stock&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;
+            &lt;div class="d-flex"&gt;
+              &lt;div class="round-product round-product-dark m-r-15"&gt;&lt;/div&gt;&lt;span&gt;Mens Gold Watches E9850&lt;/span&gt;
+            &lt;/div&gt;
+          &lt;/td&gt;
+          &lt;td&gt;&lt;span class="f-12"&gt;84&lt;/span&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;span class="badge badge-light f-14"&gt;25&lt;/span&gt;&lt;/td&gt;
+          &lt;td&gt;523&lt;/td&gt;
+          &lt;td&gt;$ 56.26&lt;/td&gt;
+          &lt;td&gt;In Stock&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;
+            &lt;div class="d-flex"&gt;
+              &lt;div class="round-product round-product-dark m-r-15"&gt;&lt;/div&gt;&lt;span&gt;Women Wallet-E32N&lt;/span&gt;
+            &lt;/div&gt;
+          &lt;/td&gt;
+          &lt;td&gt;&lt;span class="f-12"&gt;43&lt;/span&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;span class="badge badge-light f-14"&gt;08&lt;/span&gt;&lt;/td&gt;
+          &lt;td&gt;137&lt;/td&gt;
+          &lt;td&gt;$ 2.564&lt;/td&gt;
+          &lt;td&gt;In Stock&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- Cod Box Copy end --&gt;        </code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Container-fluid Ends-->
+        </div>
+        <!-- footer start-->
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6 footer-copyright">
+                        <p class="mb-0">Copyright 2022 © Xolo All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="pull-right mb-0">Hand crafted & made with &nbsp;<i class="fa fa-heart"></i></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    </div>
+    <!-- latest jquery-->
+    <script src="theme/assets/js/jquery-3.5.1.min.js"></script>
+    <!-- Bootstrap js-->
+    <script src="theme/assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- feather icon js-->
+    <script src="theme/assets/js/icons/feather-icon/feather.min.js"></script>
+    <script src="theme/assets/js/icons/feather-icon/feather-icon.js"></script>
+    <!-- Sidebar jquery-->
+    <script src="theme/assets/js/sidebar-menu.js"></script>
+    <script src="theme/assets/js/config.js"></script>
+    <!-- Plugins JS start-->
+    <script src="theme/assets/js/chart/chartist/chartist.js"></script>
+    <script src="theme/assets/js/chart/chartist/chartist-plugin-tooltip.js"></script>
+    <script src="theme/assets/js/chart/apex-chart/apex-chart.js"></script>
+    <script src="theme/assets/js/chart/apex-chart/stock-prices.js"></script>
+    <script src="theme/assets/js/prism/prism.min.js"></script>
+    <script src="theme/assets/js/clipboard/clipboard.min.js"></script>
+    <script src="theme/assets/js/counter/jquery.waypoints.min.js"></script>
+    <script src="theme/assets/js/counter/jquery.counterup.min.js"></script>
+    <script src="theme/assets/js/counter/counter-custom.js"></script>
+    <script src="theme/assets/js/custom-card/custom-card.js"></script>
+    <script src="theme/assets/js/notify/bootstrap-notify.min.js"></script>
+    <script src="theme/assets/js/dashboard/default.js"></script>
+    <script src="theme/assets/js/notify/index.js"></script>
+    <!-- Plugins JS Ends-->
+    <!-- Theme js-->
+    <script src="theme/assets/js/script.js"></script>
+    <script src="theme/assets/js/theme-customizer/customizer.js"></script>
+    <!-- login js-->
+    <!-- Plugin used-->
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
