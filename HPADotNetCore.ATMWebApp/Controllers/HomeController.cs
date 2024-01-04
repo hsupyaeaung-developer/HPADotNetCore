@@ -1,8 +1,8 @@
-﻿using HPADotNetCore.MvcATMApp.Models;
+﻿using HPADotNetCore.ATMWebApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace HPADotNetCore.MvcATMApp.Controllers
+namespace HPADotNetCore.ATMWebApp.Controllers
 {
     public class HomeController : Controller
     {

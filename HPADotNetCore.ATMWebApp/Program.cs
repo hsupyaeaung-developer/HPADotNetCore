@@ -1,16 +1,19 @@
 using Microsoft.EntityFrameworkCore;
-using HPADotNetCore.MvcATMApp;
+using HPADotNetCore.ATMWebApp;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-
 builder.Services.AddDistributedMemoryCache();
-builder.Services.AddSession(option =>
+
+builder.Services.AddSession(options =>
 {
-    option.IdleTimeout = TimeSpan.FromMinutes(60);
+    options.IdleTimeout = TimeSpan.FromSeconds(180);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
 });
+
 builder.Services.AddDbContext<AppDbContext>(opt =>
 {
     opt.UseSqlServer(builder.Configuration.GetConnectionString("DbConnection"));
@@ -30,10 +33,10 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-app.UseSession();
-app.UseRouting();
 
+app.UseRouting();
 app.UseAuthorization();
+app.UseSession();
 
 app.MapControllerRoute(
     name: "default",

@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace HPADotNetCore.MvcATMApp.Models
+namespace HPADotNetCore.ATMWebApp.Models
 {
     [Table("Tbl_ATM")]
     public class ATMDataModel

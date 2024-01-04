@@ -1,4 +1,4 @@
-﻿namespace HPADotNetCore.MvcATMApp.Models
+﻿namespace HPADotNetCore.ATMWebApp.Models
 {
     public class LoginViewModel
     {

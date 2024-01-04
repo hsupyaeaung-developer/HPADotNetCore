@@ -1,9 +1,10 @@
-﻿using HPADotNetCore.MvcATMApp.Models;
+﻿using HPADotNetCore.ATMWebApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
-namespace HPADotNetCore.MvcATMApp.Controllers
+namespace HPADotNetCore.ATMWebApp.Controllers
 {
     public class ATMController : Controller
     {
@@ -60,8 +61,16 @@ namespace HPADotNetCore.MvcATMApp.Controllers
         {
             string removeComma = reqModel.WithdrawAmount.ToString().Replace(",","");
             reqModel.WithdrawAmount = decimal.Parse(removeComma);
-            var CardNumber = _contextAccessor.HttpContext.Session.GetString("CardNumber").ToString();
-            var item = await _context.ATMDatas.FirstOrDefaultAsync(x => x.CardNumber == CardNumber);
+
+            var cardHolder = _contextAccessor.HttpContext.Session.GetString("CardHolder");
+            if(cardHolder is null)
+            {
+                return Redirect("/ATM/Login");
+            }
+            ATMDataModel atmModel = new ATMDataModel();
+            atmModel = JsonConvert.DeserializeObject<ATMDataModel>(cardHolder); 
+            
+            var item = await _context.ATMDatas.FirstOrDefaultAsync(x => x.CardNumber == atmModel.CardNumber);
 
             WithdrawViewModel model = new WithdrawViewModel();
 
@@ -86,8 +95,14 @@ namespace HPADotNetCore.MvcATMApp.Controllers
         public async Task<IActionResult> WithdrawConfirm(WithdrawViewModel reqModel)
         {
             WithdrawViewModel model = new WithdrawViewModel();
-            var CardNumber = _contextAccessor.HttpContext.Session.GetString("CardNumber").ToString();
-            var item = await _context.ATMDatas.FirstOrDefaultAsync(x => x.CardNumber == CardNumber);
+            var cardHolder = _contextAccessor.HttpContext.Session.GetString("CardHolder");
+            if (cardHolder is null)
+            {
+                return Redirect("/ATM/Login");
+            }
+            ATMDataModel atmModel = new ATMDataModel();
+            atmModel = JsonConvert.DeserializeObject<ATMDataModel>(cardHolder);
+            var item = await _context.ATMDatas.FirstOrDefaultAsync(x => x.CardNumber == atmModel.CardNumber);
 
             if (reqModel.WithdrawAmount > item.Balance)
             {
@@ -120,8 +135,14 @@ namespace HPADotNetCore.MvcATMApp.Controllers
         [ActionName("Deposit")]
         public async Task<IActionResult> DepositConfirm(DepositViewModel reqModel)
         {
-            var CardNumber = _contextAccessor.HttpContext.Session.GetString("CardNumber").ToString();
-            var item = await _context.ATMDatas.FirstOrDefaultAsync(x => x.CardNumber == CardNumber);
+            var cardHolder = _contextAccessor.HttpContext.Session.GetString("CardHolder");
+            if (cardHolder is null)
+            {
+                return Redirect("/ATM/Login");
+            }
+            ATMDataModel atmModel = new ATMDataModel();
+            atmModel = JsonConvert.DeserializeObject<ATMDataModel>(cardHolder);
+            var item = await _context.ATMDatas.FirstOrDefaultAsync(x => x.CardNumber == atmModel.CardNumber);
             item.Balance = item.Balance + reqModel.DepositAmount;
             var result = await _context.SaveChangesAsync();
 
@@ -143,7 +164,7 @@ namespace HPADotNetCore.MvcATMApp.Controllers
             }
             else
             {
-                _contextAccessor.HttpContext.Session.SetString("CardNumber", atm.CardNumber);
+                _contextAccessor.HttpContext.Session.SetString("CardHolder", JsonConvert.SerializeObject(atm));
                 
             }
             return View("Dashboard");
