@@ -10,6 +10,7 @@ namespace HPADotNetCore.ATMWebApp.Controllers
     {
         private readonly AppDbContext _context;
         private readonly IHttpContextAccessor _contextAccessor;
+
         public ATMController(AppDbContext context, IHttpContextAccessor contextAccessor)
         {
             _context = context;
@@ -33,6 +34,7 @@ namespace HPADotNetCore.ATMWebApp.Controllers
             return View("LoginPage", model);
 
         }
+
         public IActionResult Deposit()
         {
 
@@ -169,6 +171,7 @@ namespace HPADotNetCore.ATMWebApp.Controllers
             }
             return View("Dashboard");
         }
+
         public IActionResult Register()
         {
             ATMDataModel model = new ATMDataModel();
@@ -211,6 +214,7 @@ namespace HPADotNetCore.ATMWebApp.Controllers
             model.GeneratedNumber = GenerateNumber;
             return model;
         }
+
         public int GenerateData(int from, int to)
         {
             Random random = new Random();

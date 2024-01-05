@@ -145,7 +145,6 @@ namespace HPADotNetCore.MvcApp.Controllers
             return Redirect("/Blog");
         }
 
-
         [ActionName("Delete")]
         public async Task<IActionResult> BlogDelete(int id)
         {
