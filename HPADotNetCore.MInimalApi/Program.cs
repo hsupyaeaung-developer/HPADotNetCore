@@ -3,7 +3,7 @@ using HPADotNetCore.MinimalApi.Features.Blog;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json.Serialization;
-
+using Newtonsoft.Json.Serialization;
 var builder = WebApplication.CreateBuilder(args);
 
 //builder.Services.AddControllersWithViews().AddJsonOptions(opt =>
@@ -17,7 +17,6 @@ builder.Services.ConfigureHttpJsonOptions(option =>
     option.SerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull;
     option.SerializerOptions.PropertyNamingPolicy = null;
 });
-
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
