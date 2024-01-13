@@ -11,8 +11,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HPADotNetCore.MvcApp", "HPA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HPADotNetCore.WindowsFormsApp", "HPADotNetCore.WindowsFormsApp\HPADotNetCore.WindowsFormsApp.csproj", "{73328A4D-79F4-4F7C-B0EC-BA428BD409BD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HPADotNetCore.MInimalApi", "HPADotNetCore.MInimalApi\HPADotNetCore.MInimalApi.csproj", "{E2C95EEE-1722-4F99-A5E0-9F328BE9C072}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documnets", "Documnets", "{4301EB04-4128-4CE0-9A8C-2ECE7B90281A}"
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
@@ -20,7 +18,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documnets", "Documnets", "{
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HPADotNetCore.ThemeMvcApp", "HPADotNetCore.ThemeMvcApp\HPADotNetCore.ThemeMvcApp.csproj", "{A2EC536E-1E12-4489-AB0C-5B36DC05125E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HPADotNetCore.ATMWebApp", "HPADotNetCore.ATMWebApp\HPADotNetCore.ATMWebApp.csproj", "{EB387822-806D-4AC8-BC25-CB6007FA0870}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HPADotNetCore.ATMWebApp", "HPADotNetCore.ATMWebApp\HPADotNetCore.ATMWebApp.csproj", "{EB387822-806D-4AC8-BC25-CB6007FA0870}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HPADotNetCore.MinimalApi", "HPADotNetCore.MinimalApi\HPADotNetCore.MinimalApi.csproj", "{FC4A697A-D248-445D-830B-89C7DC693A43}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,10 +44,6 @@ Global
 		{73328A4D-79F4-4F7C-B0EC-BA428BD409BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73328A4D-79F4-4F7C-B0EC-BA428BD409BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73328A4D-79F4-4F7C-B0EC-BA428BD409BD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E2C95EEE-1722-4F99-A5E0-9F328BE9C072}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E2C95EEE-1722-4F99-A5E0-9F328BE9C072}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E2C95EEE-1722-4F99-A5E0-9F328BE9C072}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E2C95EEE-1722-4F99-A5E0-9F328BE9C072}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A2EC536E-1E12-4489-AB0C-5B36DC05125E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A2EC536E-1E12-4489-AB0C-5B36DC05125E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2EC536E-1E12-4489-AB0C-5B36DC05125E}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -56,6 +52,10 @@ Global
 		{EB387822-806D-4AC8-BC25-CB6007FA0870}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB387822-806D-4AC8-BC25-CB6007FA0870}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB387822-806D-4AC8-BC25-CB6007FA0870}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC4A697A-D248-445D-830B-89C7DC693A43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC4A697A-D248-445D-830B-89C7DC693A43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC4A697A-D248-445D-830B-89C7DC693A43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC4A697A-D248-445D-830B-89C7DC693A43}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
