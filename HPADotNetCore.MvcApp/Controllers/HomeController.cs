@@ -1,8 +1,9 @@
-﻿using HPADotNetCore.MvcApp.Models;
+﻿using HPADotNetCore.MvcApp;
+using HPADotNetCore.MvcApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace HPADotNetCore.MvcApp.Controllers
+namespace HPADotNetCore.ThemeMvcApp.Controllers
 {
     public class HomeController : Controller
     {

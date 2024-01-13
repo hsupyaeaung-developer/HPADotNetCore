@@ -1,5 +1,8 @@
 using HPADotNetCore.MvcApp;
+using HPADotNetCore.MvcApp.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using Refit;
+using RestSharp;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +14,24 @@ builder.Services.AddDbContext<AppDbContext>(opt =>
 },
 ServiceLifetime.Transient,
 ServiceLifetime.Transient);
+
+#region Refit
+builder.Services
+    .AddRefitClient<IBlogApi>()
+    .ConfigureHttpClient(c => c.BaseAddress = new Uri(builder.Configuration.GetSection("RestApiUrl").Value!));
+
+#endregion
+
+#region HttpClient
+builder.Services.AddScoped(x => new HttpClient
+{
+    BaseAddress = new Uri(builder.Configuration.GetSection("RestApiUrl").Value!)
+});
+#endregion
+
+#region RestClient
+builder.Services.AddScoped(x => new RestClient(builder.Configuration.GetSection("RestApiUrl").Value!));
+#endregion
 
 var app = builder.Build();
 

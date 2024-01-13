@@ -1,11 +1,11 @@
-﻿@model BlogListResponseModel
+﻿@model BlogDataResponseModel
 @{
     int rowCount = 0;
 }
 
 <partial name="_ValidateMessage" />
-<p>Page Count : @Model.PageCount</p>
-<p>Page Row Count : @Model.PageRowCount</p>
+<p>Page Count : @Model.PageSetting.PageCount</p>
+<p>Page Row Count : @Model.PageSetting.PageNo</p>
 <table class="table">
     <thead>
         <tr>
@@ -17,7 +17,7 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (BlogDataModel item in Model.BlogList)
+        @foreach (BlogDataModel item in Model.Blogs)
         {
             <tr>
                 <td>
@@ -33,3 +33,4 @@
         }
     </tbody>
 </table>
+@await Html.PartialAsync("_Pagination",Model.PageSetting)

@@ -1,6 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using HPADotNetCore.MvcApp;
+using Microsoft.AspNetCore.Mvc;
 
-namespace AEHKLMNSTZDotNetCore.MvcApp.Controllers
+namespace HPADotNetCore.MvcApp.Controllers
 {
     public class UserController : Controller
     {

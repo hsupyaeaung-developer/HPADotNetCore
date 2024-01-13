@@ -1,9 +1,10 @@
-﻿using HPADotNetCore.MvcApp.Models;
+﻿using HPADotNetCore.MvcApp;
+using HPADotNetCore.MvcApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection.Metadata;
 
-namespace HPADotNetCore.MvcApp.Controllers
+namespace HPADotNetCore.ThemeMvcApp.Controllers
 {
     public class BlogController : Controller
     {
@@ -29,42 +30,23 @@ namespace HPADotNetCore.MvcApp.Controllers
             if (pageRowCount % pageSize > 0)
                 pageCount++;
 
-            //string a = "hello world";
-            //ViewData["Title2"] = a;
-            //ViewData["Number"] = 2;
-            //ViewBag.Number2 = 3;
-
-            //TempData["Title2"] = a;
-            //TempData["Number"] = 2;
-            //TempData["Number2"] = 3;
-            //return Redirect("/Home");
-
-            BlogListResponseModel model = new BlogListResponseModel
+            BlogDataResponseModel model = new BlogDataResponseModel();
+            
+            model.Blogs = lst;
+            model.PageSetting = new PageSettingModel
             {
-                BlogList = lst,
                 PageCount = pageCount,
                 PageNo = pageNo,
-                PageRowCount = pageRowCount,
                 PageSize = pageSize
             };
-
-            //throw new Exception("heehee");
-
+            
             return View("BlogIndex", model);
         }
 
         [ActionName("Create")]
         public IActionResult BlogCreate()
         {
-            //string a = "hello world";
-            //ViewData["Title2"] = a;
-            //ViewData["Number"] = 2;
-            //ViewBag.Number2 = 3;
-
-            //TempData["Title2"] = a;
-            //TempData["Number"] = 2;
-            //TempData["Number2"] = 3;
-            //return Redirect("/Home");
+            
             return View("BlogCreate");
         }
 

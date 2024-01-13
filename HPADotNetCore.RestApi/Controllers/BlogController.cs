@@ -32,7 +32,6 @@ namespace HPADotNetCore.RestApi.Controllers
         [HttpGet("{pageNo}/{pageSize}")]
         public IActionResult GetBlogs(int pageNo, int pageSize)
         {
-
             var lst = _db
                 .Blogs
                 .Skip((pageNo - 1) * pageSize)
@@ -51,8 +50,6 @@ namespace HPADotNetCore.RestApi.Controllers
         public IActionResult GetBlog(int id)
         {
             BlogResponseModel model = new BlogResponseModel();
-
-           
             var item = _db.Blogs.FirstOrDefault(x => x.Blog_Id == id);
             if (item == null)
             {
@@ -70,7 +67,6 @@ namespace HPADotNetCore.RestApi.Controllers
         [HttpPost]
         public IActionResult CreateBlog([FromBody] BlogDataModel blog)
         {
-            
             _db.Blogs.Add(blog);
             int result = _db.SaveChanges();
             string message = result > 0 ? "Saving Successful!" : "Saving Failed!";
@@ -88,7 +84,6 @@ namespace HPADotNetCore.RestApi.Controllers
         public IActionResult UpdateBlog(int id, [FromBody] BlogDataModel blog)
         {
             BlogResponseModel model = new BlogResponseModel();
-            
             BlogDataModel item = _db.Blogs.FirstOrDefault(x => x.Blog_Id == id);
             if (item == null)
             {

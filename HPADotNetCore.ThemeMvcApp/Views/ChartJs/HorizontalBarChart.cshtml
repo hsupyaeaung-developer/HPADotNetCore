@@ -1,0 +1,66 @@
+﻿@model ChartJsHorizontalBarChartResponseModel
+
+@{
+    List<int> _data1 = Model.DataSets[0].Data;
+    List<int> _data2 = Model.DataSets[1].Data;
+}
+
+<div>
+    <canvas id="myChart"></canvas>
+</div>
+
+@section scripts {
+    <script>
+        const ctx = document.getElementById('myChart');
+
+        const DATA_COUNT = 7;
+        const NUMBER_CFG = { count: DATA_COUNT, min: -100, max: 100 };
+
+        const labels = @Html.Raw(JsonConvert.SerializeObject(Model.Labels));
+  
+        const data = {
+            labels: labels,
+            datasets: [
+                {
+                    label: "@Model.DataSets[0].Label",
+                    data: @Html.Raw(JsonConvert.SerializeObject(_data1)),
+                    borderColor: "@Model.DataSets[0].BorderColor",
+                    backgroundColor: "@Model.DataSets[0].BackgroundColor",
+                },
+                {
+                    label: "@Model.DataSets[1].Label",
+                    data: @Html.Raw(JsonConvert.SerializeObject(_data2)) ,
+                    borderColor: "@Model.DataSets[1].BorderColor",
+                    backgroundColor: "@Model.DataSets[1].BackgroundColor",
+                }
+            ]
+        };
+
+        const config = {
+          type: 'bar',
+          data: data,
+          options: {
+            indexAxis: 'y',
+            // Elements options apply to all of the options unless overridden in a dataset
+            // In this case, we are setting the border of each horizontal bar to be 2px wide
+            elements: {
+              bar: {
+                borderWidth: 2,
+              }
+            },
+            responsive: true,
+            plugins: {
+              legend: {
+                position: 'right',
+              },
+              title: {
+                display: true,
+                text: 'Chart.js Horizontal Bar Chart'
+              }
+            }
+          },
+        };
+
+        new Chart(ctx, config);
+    </script>
+}

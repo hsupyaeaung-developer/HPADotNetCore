@@ -1,8 +1,9 @@
-﻿using HPADotNetCore.MvcApp.Models;
+﻿using HPADotNetCore.MvcApp;
+using HPADotNetCore.MvcApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace HPADotNetCore.MvcApp.Controllers
+namespace HPADotNetCore.ThemeMvcApp.Controllers
 {
     public class BlogAjaxController : Controller
     {
