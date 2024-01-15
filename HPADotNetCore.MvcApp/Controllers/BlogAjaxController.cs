@@ -3,7 +3,7 @@ using HPADotNetCore.MvcApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace HPADotNetCore.ThemeMvcApp.Controllers
+namespace HPADotNetCore.MvcApp.Controllers
 {
     public class BlogAjaxController : Controller
     {

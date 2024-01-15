@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection.Metadata;
 
-namespace HPADotNetCore.ThemeMvcApp.Controllers
+namespace HPADotNetCore.MvcApp.Controllers
 {
     public class BlogController : Controller
     {
