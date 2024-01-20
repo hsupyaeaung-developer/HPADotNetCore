@@ -1,5 +1,7 @@
 
 
+Scaffold-DbContext "Server=DESKTOP-HDNAOSB\SQL2022;Database=TestDb;User ID=sa;Password=sa@123;Trusted_Connection=True;Trust Server Certificate=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Context AppDbContext -Tables Tbl_Blog
+
 https://github.com/reactiveui/refit
 https://reactiveui.github.io/refit/
 https://www.ezzylearning.net/wp-content/uploads/ASP.NET-Core-Service-Lifetime-Infographic.png
