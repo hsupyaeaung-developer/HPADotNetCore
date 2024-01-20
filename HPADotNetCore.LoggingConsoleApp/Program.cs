@@ -2,20 +2,23 @@
     // See https://aka.ms/new-console-template for more information
 using Serilog;
 using Serilog.Sinks.MSSqlServer;
+using System.Reflection;
 
     Console.WriteLine("Hello, World!");
 
-    Log.Logger = new LoggerConfiguration()
-               .MinimumLevel.Debug()
-               .WriteTo.Console()
-               .WriteTo.File("logs/myapp.txt", rollingInterval: RollingInterval.Hour, fileSizeLimitBytes: 1024)
-               .WriteTo
-               .MSSqlServer(
-                connectionString: "Server=DESKTOP-HDNAOSB\\SQL2022;Database=TestDb;User ID =sa;Password=sa@123;TrustServerCertificate=true;",
-                sinkOptions: new MSSqlServerSinkOptions { TableName = "LogEvents", AutoCreateSqlTable = true })
-               .CreateLogger();
+//get current project name
+var projectName = Assembly.GetCallingAssembly().GetName().Name;
 
-    Log.Information("Hello, world!");
+Log.Logger = new LoggerConfiguration()
+        .WriteTo.Console()
+        .WriteTo.File($"logs/{projectName}.txt", rollingInterval: RollingInterval.Hour, fileSizeLimitBytes: 1024 * 100)
+        .WriteTo
+        .MSSqlServer(
+        connectionString: "Server=DESKTOP-HDNAOSB\\SQL2022;Database=TestDb;User ID =sa;Password=sa@123;TrustServerCertificate=true;",
+        sinkOptions: new MSSqlServerSinkOptions { TableName = "ConsoleLogEvents", AutoCreateSqlTable = true })
+        .CreateLogger();
+
+Log.Information("Hello, world!");
     
     int a = 10, b = 0;
     try
