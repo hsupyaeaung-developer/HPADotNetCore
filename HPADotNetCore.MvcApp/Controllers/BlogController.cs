@@ -3,16 +3,18 @@ using HPADotNetCore.MvcApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection.Metadata;
+using System.Text.Json;
 
 namespace HPADotNetCore.MvcApp.Controllers
 {
     public class BlogController : Controller
     {
         private readonly AppDbContext _context;
-
-        public BlogController(AppDbContext context)
+        private readonly ILogger<BlogController> _logger;
+        public BlogController(AppDbContext context, ILogger<BlogController> logger)
         {
             _context = context;
+            _logger = logger;
         }
 
         [ActionName("Index")]
@@ -39,7 +41,7 @@ namespace HPADotNetCore.MvcApp.Controllers
                 PageNo = pageNo,
                 PageSize = pageSize
             };
-            
+            _logger.LogInformation("Blog Data Response Model => " + JsonSerializer.Serialize(model));
             return View("BlogIndex", model);
         }
 
@@ -54,10 +56,15 @@ namespace HPADotNetCore.MvcApp.Controllers
         [ActionName("Save")]
         public async Task<IActionResult> BlogSave(BlogDataModel blog)
         {
+            _logger.LogInformation("Blog Save Request Model => " + JsonSerializer.Serialize(blog));
             await _context.AddAsync(blog);
             var result = await _context.SaveChangesAsync();
-            TempData["IsSuccess"] = result > 0;
-            TempData["Message"] = result > 0 ? "Saving Successful." : "Saving Failed.";
+            bool IsSuccess = result > 0;
+            string Message =  result > 0 ? "Saving Successful." : "Saving Failed.";
+            TempData["IsSuccess"] = IsSuccess;
+            TempData["Message"] = Message;
+
+            _logger.LogInformation("Blog Save Response Message => " + Message);
             return Redirect("/Blog");
         }
 
@@ -83,7 +90,10 @@ namespace HPADotNetCore.MvcApp.Controllers
             if (!isExist)
             {
                 TempData["IsSuccess"] = false;
-                TempData["Message"] = "No data found.";
+                string Message = "No data found.";
+                TempData["Message"] = Message;
+
+                _logger.LogInformation("Blog Edit Resposne Message => " + Message);
                 return Redirect("/Blog");
             }
 
@@ -91,9 +101,13 @@ namespace HPADotNetCore.MvcApp.Controllers
             if (item == null)
             {
                 TempData["IsSuccess"] = false;
-                TempData["Message"] = "No data found.";
+                string Message = "No data found.";
+                TempData["Message"] = Message;
+
+                _logger.LogInformation("Blog Edit Response Message => " + Message);
                 return Redirect("/Blog");
             }
+                _logger.LogInformation("Blog Edit Response Model => " + JsonSerializer.Serialize(item));
             return View("BlogEdit", item);
         }
 
@@ -101,11 +115,17 @@ namespace HPADotNetCore.MvcApp.Controllers
         [ActionName("Update")]
         public async Task<IActionResult> BlogUpdate(int id, BlogDataModel blog)
         {
+            _logger.LogInformation("Blog Update Id => " + id);
+            _logger.LogInformation("Blog Update Request Model => " + JsonSerializer.Serialize(blog));
+
             bool isExist = await _context.Blogs.AsNoTracking().AnyAsync(x => x.Blog_Id == id);
             if (!isExist)
             {
                 TempData["IsSuccess"] = false;
-                TempData["Message"] = "No data found.";
+                string Message = "No data found.";
+                TempData["Message"] = Message;
+
+                _logger.LogInformation("Blog Update Response Message => " + Message);
                 return Redirect("/Blog");
             }
 
@@ -113,7 +133,10 @@ namespace HPADotNetCore.MvcApp.Controllers
             if (item == null)
             {
                 TempData["IsSuccess"] = false;
-                TempData["Message"] = "No data found.";
+                string Message = "No data found.";
+                TempData["Message"] = Message;
+
+                _logger.LogInformation("Blog Update Response Message => " + Message);
                 return Redirect("/Blog");
             }
 
@@ -123,18 +146,26 @@ namespace HPADotNetCore.MvcApp.Controllers
 
             var result = await _context.SaveChangesAsync();
             TempData["IsSuccess"] = result > 0;
-            TempData["Message"] = result > 0 ? "Updating Successful." : "Updating Failed.";
+            string ResMessage = result > 0 ? "Updating Successful." : "Updating Failed.";
+            TempData["Message"] = ResMessage;
+
+            _logger.LogInformation("Blog Update Response Message => " + ResMessage);
             return Redirect("/Blog");
         }
 
         [ActionName("Delete")]
         public async Task<IActionResult> BlogDelete(int id)
         {
+            _logger.LogInformation("Blog Delete Id => " + id);
+
             bool isExist = await _context.Blogs.AsNoTracking().AnyAsync(x => x.Blog_Id == id);
             if (!isExist)
             {
                 TempData["IsSuccess"] = false;
-                TempData["Message"] = "No data found.";
+                string Message = "No data found.";
+                TempData["Message"] = Message;
+
+                _logger.LogInformation("Blog Delete Response Message => " + Message);
                 return Redirect("/Blog");
             }
 
@@ -142,15 +173,19 @@ namespace HPADotNetCore.MvcApp.Controllers
             if (item == null)
             {
                 TempData["IsSuccess"] = false;
-                TempData["Message"] = "No data found.";
-                return Redirect("/Blog");
+                string Message = "No data found.";
+                TempData["Message"] = Message;
+
+                _logger.LogInformation("Blog Delete Response Message => " + Message);
             }
 
             _context.Blogs.Remove(item);
             var result = await _context.SaveChangesAsync();
             TempData["IsSuccess"] = result > 0;
-            TempData["Message"] = result > 0 ? "Deleting Successful." : "Deleting Failed.";
+            string ResMessage = result > 0 ? "Deleting Successful." : "Deleting Failed.";
+            TempData["Message"] = ResMessage;
 
+            _logger.LogInformation("Blog Delete Response Message => " + ResMessage);
             return Redirect("/Blog");
         }
     }

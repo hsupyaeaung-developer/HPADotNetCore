@@ -3,11 +3,27 @@ using HPADotNetCore.MvcApp.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using Refit;
 using RestSharp;
+using Serilog;
+using Serilog.Sinks.MSSqlServer;
+using System.Reflection;
+//get current project name
+var projectName = Assembly.GetCallingAssembly().GetName().Name;
 
-var builder = WebApplication.CreateBuilder(args);
+Log.Logger = new LoggerConfiguration()
+        .WriteTo.Console()
+        .WriteTo.File($"logs/{projectName}.txt", rollingInterval: RollingInterval.Hour, fileSizeLimitBytes: 1024 * 100)
+        .WriteTo
+        .MSSqlServer(
+        connectionString: "Server=DESKTOP-HDNAOSB\\SQL2022;Database=TestDb;User ID =sa;Password=sa@123;TrustServerCertificate=true;",
+        sinkOptions: new MSSqlServerSinkOptions { TableName = "MVCLogEvents", AutoCreateSqlTable = true })
+        .CreateLogger();
 
-// Add services to the container.
-builder.Services.AddControllersWithViews(); 
+try
+{
+    var builder = WebApplication.CreateBuilder(args);
+    builder.Host.UseSerilog();
+    // Add services to the container.
+    builder.Services.AddControllersWithViews(); 
 builder.Services.AddDbContext<AppDbContext>(opt =>
 {
     opt.UseSqlServer(builder.Configuration.GetConnectionString("DbConnection"));
@@ -55,3 +71,12 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
+}
+catch (Exception ex)
+{
+    Log.Fatal(ex, "Application terminated unexpectedly");
+}
+finally
+{
+    Log.CloseAndFlush();
+}

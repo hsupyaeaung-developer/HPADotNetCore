@@ -20,7 +20,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HPADotNetCore.ThemeMvcApp",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HPADotNetCore.ATMWebApp", "HPADotNetCore.ATMWebApp\HPADotNetCore.ATMWebApp.csproj", "{EB387822-806D-4AC8-BC25-CB6007FA0870}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HPADotNetCore.MinimalApi", "HPADotNetCore.MinimalApi\HPADotNetCore.MinimalApi.csproj", "{FC4A697A-D248-445D-830B-89C7DC693A43}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HPADotNetCore.MinimalApi", "HPADotNetCore.MinimalApi\HPADotNetCore.MinimalApi.csproj", "{FC4A697A-D248-445D-830B-89C7DC693A43}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HPADotNetCore.DbFirstCommand", "HPADotNetCore.DbFirstCommand\HPADotNetCore.DbFirstCommand.csproj", "{114CDBE7-C415-4CB2-87CE-FF86EEBE635E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HPADotNetCore.LoggingConsoleApp", "HPADotNetCore.LoggingConsoleApp\HPADotNetCore.LoggingConsoleApp.csproj", "{C96138B4-4EC6-4FA2-B528-3BF27E14A38B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -56,6 +60,14 @@ Global
 		{FC4A697A-D248-445D-830B-89C7DC693A43}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC4A697A-D248-445D-830B-89C7DC693A43}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC4A697A-D248-445D-830B-89C7DC693A43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{114CDBE7-C415-4CB2-87CE-FF86EEBE635E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{114CDBE7-C415-4CB2-87CE-FF86EEBE635E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{114CDBE7-C415-4CB2-87CE-FF86EEBE635E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{114CDBE7-C415-4CB2-87CE-FF86EEBE635E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C96138B4-4EC6-4FA2-B528-3BF27E14A38B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C96138B4-4EC6-4FA2-B528-3BF27E14A38B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C96138B4-4EC6-4FA2-B528-3BF27E14A38B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C96138B4-4EC6-4FA2-B528-3BF27E14A38B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
