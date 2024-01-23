@@ -26,7 +26,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HPADotNetCore.DbFirstComman
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HPADotNetCore.LoggingConsoleApp", "HPADotNetCore.LoggingConsoleApp\HPADotNetCore.LoggingConsoleApp.csproj", "{C96138B4-4EC6-4FA2-B528-3BF27E14A38B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HPADotNetCore.NLoggingMinimalApi", "HPADotNetCore.NLoggingMinimalApi\HPADotNetCore.NLoggingMinimalApi.csproj", "{69F6B4A1-72E9-46D9-A575-06AA4EDB99C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HPADotNetCore.NLoggingMinimalApi", "HPADotNetCore.NLoggingMinimalApi\HPADotNetCore.NLoggingMinimalApi.csproj", "{69F6B4A1-72E9-46D9-A575-06AA4EDB99C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HPADotNetCore.Log4NetLoggingMinimalApi", "HPADotNetCore.Log4NetLoggingMinimalApi\HPADotNetCore.Log4NetLoggingMinimalApi.csproj", "{52EBF505-7871-4DF8-BA19-AAB3B914C387}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -74,6 +76,10 @@ Global
 		{69F6B4A1-72E9-46D9-A575-06AA4EDB99C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69F6B4A1-72E9-46D9-A575-06AA4EDB99C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69F6B4A1-72E9-46D9-A575-06AA4EDB99C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52EBF505-7871-4DF8-BA19-AAB3B914C387}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52EBF505-7871-4DF8-BA19-AAB3B914C387}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52EBF505-7871-4DF8-BA19-AAB3B914C387}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52EBF505-7871-4DF8-BA19-AAB3B914C387}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
