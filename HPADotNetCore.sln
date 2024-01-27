@@ -28,7 +28,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HPADotNetCore.LoggingConsol
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HPADotNetCore.NLoggingMinimalApi", "HPADotNetCore.NLoggingMinimalApi\HPADotNetCore.NLoggingMinimalApi.csproj", "{69F6B4A1-72E9-46D9-A575-06AA4EDB99C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HPADotNetCore.Log4NetLoggingMinimalApi", "HPADotNetCore.Log4NetLoggingMinimalApi\HPADotNetCore.Log4NetLoggingMinimalApi.csproj", "{52EBF505-7871-4DF8-BA19-AAB3B914C387}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HPADotNetCore.Log4NetLoggingMinimalApi", "HPADotNetCore.Log4NetLoggingMinimalApi\HPADotNetCore.Log4NetLoggingMinimalApi.csproj", "{52EBF505-7871-4DF8-BA19-AAB3B914C387}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HPADotNetCore.SignalRChatApp", "HPADotNetCore.SignalRChatApp\HPADotNetCore.SignalRChatApp.csproj", "{F5B678DD-DF18-4034-810F-969B3777DDBE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -80,6 +82,10 @@ Global
 		{52EBF505-7871-4DF8-BA19-AAB3B914C387}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52EBF505-7871-4DF8-BA19-AAB3B914C387}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{52EBF505-7871-4DF8-BA19-AAB3B914C387}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5B678DD-DF18-4034-810F-969B3777DDBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5B678DD-DF18-4034-810F-969B3777DDBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5B678DD-DF18-4034-810F-969B3777DDBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5B678DD-DF18-4034-810F-969B3777DDBE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
